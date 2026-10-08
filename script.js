@@ -99,6 +99,7 @@ function translateStatic(){
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{const key=el.dataset.i18nHtml;if(typeof t[key]==='string')el.innerHTML=t[key]});
   query('langLabel').textContent=language==='vi'?'EN':'VI';
   query('langToggle').setAttribute('aria-label',language==='vi'?'Switch to English':'Chuyển sang tiếng Việt');
+  query('menuToggle').setAttribute('aria-label',language==='vi'?'Mở menu':'Open menu');
   query('dialogClose').setAttribute('aria-label',language==='vi'?'Đóng':'Close');
   renderTimeline();renderProjects();renderCertificates();
 }
@@ -139,5 +140,7 @@ query('certificateGrid').addEventListener('click',e=>{const b=e.target.closest('
 query('dialogClose').addEventListener('click',()=>query('certDialog').close());
 query('certDialog').addEventListener('click',e=>{if(e.target===query('certDialog'))query('certDialog').close()});
 query('copyEmail').addEventListener('click',async()=>{const b=query('copyEmail');try{await navigator.clipboard.writeText('kieumanh2211@gmail.com');b.textContent=translations[language].copiedEmail;setTimeout(()=>b.textContent=translations[language].copyEmail,2500)}catch(e){window.location.href='mailto:kieumanh2211@gmail.com'}});
-let scrollQueued=false;window.addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(()=>{const doc=document.documentElement;const max=doc.scrollHeight-doc.clientHeight;query('pageProgress').style.width=(max>0?Math.max(0,Math.min(100,doc.scrollTop/max*100)):0)+'%';scrollQueued=false})}},{passive:true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+document.addEventListener('click',e=>{if(!e.target.closest('.header'))closeMenu()});
+window.addEventListener('resize',()=>{if(window.innerWidth>900)closeMenu()},{passive:true});
 translateStatic();

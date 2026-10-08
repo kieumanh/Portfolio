@@ -1,4 +1,4 @@
-# Kiều Xuân Mạnh — Portfolio v1.0
+# Kiều Xuân Mạnh — Portfolio v1.2
 
 Website portfolio tĩnh, song ngữ Việt–Anh, responsive. Dùng HTML, CSS, JavaScript thuần: không yêu cầu build, không có backend, không cần Lovable credits.
 
@@ -7,7 +7,7 @@ Website portfolio tĩnh, song ngữ Việt–Anh, responsive. Dùng HTML, CSS, J
 Mở `index.html` trong trình duyệt để duyệt nội dung. Để kiểm tra mọi tính năng (nhất là PDF và font), nên chạy HTTP server:
 
 ```bash
-cd kieu-manh-portfolio
+cd Portfolio
 python -m http.server 8080
 ```
 
@@ -25,11 +25,11 @@ Sau đó mở `http://localhost:8080`.
 
 **GitHub Pages:** hướng dẫn cụ thể cho `kieumanh/Portfolio` nằm trong [`GITHUB_PAGES.md`](GITHUB_PAGES.md).
 
-Upload toàn bộ thư mục này lên Cloudflare Pages (Direct Upload) hoặc deploy bằng GitHub + Pages. Đảm bảo giữ thư mục `assets/` và `documents/` nguyên cấu trúc. Chưa liên kết tên miền / chưa deploy production.
+Upload toàn bộ thư mục này lên Cloudflare Pages (Direct Upload) hoặc deploy bằng GitHub + Pages. Đảm bảo giữ thư mục `assets/` và `documents/` nguyên cấu trúc. Website hiện được xuất bản trên GitHub Pages.
 
 ## Việc cần xác minh trước khi công khai
 
-1. Ảnh đại diện đang tham chiếu đến đường dẫn công khai từ website đề xuất Bidicomed; nếu hosting cũ bị gỡ ảnh sẽ tự động chuyển sang monogram KM. Nên thay bằng ảnh Mạnh tự cấp quyền sử dụng và lưu nội bộ trong assets.
+1. Ảnh đại diện được giữ nguyên từ portfolio tham chiếu và lưu nội bộ tại `assets/kieu-manh-portrait.jpg`; monogram KM vẫn là dự phòng khi ảnh lỗi.
 2. Các mốc 2012, 2017, 2021, 2021–2022, 2023–2024, 01/2025 dựa trên portfolio tham chiếu do chính Mạnh cung cấp, chưa đối chiếu toàn bộ bằng giấy tờ độc lập. Mạnh nên đọc và xác nhận.
 3. Chứng nhận AI for Impact: nguồn portfolio tham chiếu ghi tháng 06/2026, nhưng PDF không in ngày cấp. Bản hiển thị chỉ dùng năm 2026.
 4. Học phần FPT Polytechnic là 'hoàn tất học phần', KHÔNG ghi 'tốt nghiệp cao đẳng'.
@@ -49,10 +49,11 @@ Xem `SOURCES.md`.
 - Source: `Deploy from a branch`, `main`, `/(root)`.
 - Dùng asset path tương đối để hỗ trợ deployment vào `/Portfolio/`.
 
-## 1.1 – Music & accessibility
+## 1.2 — Nhạc nền và QA
 
-- Background music: `assets/hiro-sight-of-wonders-128.mp3` (optimized to 128 kbps); attempts autoplay, falls back to the first user interaction when a browser blocks audible autoplay; floating bilingual toggle.
-- Back-to-top control appears at 20% scroll progress, with reduced-motion support.
-- Floating button colors adapt to the underlying section; mobile-safe positioning.
-- Certificate previews and PDFs are included in the repository.
-- Playback is opt-out (preference saved locally). Publish audio only if its distribution license covers your website.
+- Nhạc `assets/hiro-background.mp3`: Hiro – Sight of Wonders từ file được cung cấp, MP3 128 kbps. Chỉ tải và phát sau khi bấm nút nhạc; luôn tắt khi tải lại trang.
+- Nút về đầu trang xuất hiện khi vượt 20% khoảng cuộn khả dụng, hỗ trợ cuộn mượt và reduced motion.
+- Nút nổi đổi màu theo khu vực tại vị trí nút; thu nhỏ trên tablet/mobile, vùng bấm ít nhất 44 px.
+- Ba ảnh WebP được xuất từ đúng PDF gốc; đầy đủ PDF trong `documents/`.
+- Bảng màu thiên nhiên sáng hơn, tăng độ tương phản chữ phụ; nội dung và timeline được giữ nguyên.
+- Kết quả kiểm thử: xem `QA.md`.

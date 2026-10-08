@@ -19,7 +19,7 @@
 - Trang chủ tải bình thường ở desktop/tablet/mobile.
 - Chuyển Việt–Anh; menu mobile; lọc dự án; mở modal chứng nhận; mở 3 PDF gốc.
 - Đường dẫn chuẩn và sitemap: `https://kieumanh.github.io/Portfolio/sitemap.xml`.
-- Phần chân dung **chưa lấy ảnh từ Facebook** vì chưa nhận được đường dẫn ảnh/trang cá nhân; hiện dùng ảnh dự phòng từ hồ sơ tham chiếu và chữ KM khi ảnh lỗi. Khi có ảnh được phép sử dụng, lưu file nội bộ tại `assets/avatar.webp` rồi sửa `src` trong `index.html` thành `assets/avatar.webp`.
+- Chân dung được lưu nội bộ tại `assets/kieu-manh-portrait.jpg`; chữ KM làm dự phòng khi ảnh lỗi.
 
 ## Lưu ý quyền riêng tư
 
