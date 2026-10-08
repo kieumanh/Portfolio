@@ -1,3 +1,26 @@
+# Cập nhật Portfolio v1.3 — 08/10/2026
+
+## Thay đổi
+
+Làm sáng nền đầu trang; âm lượng 0–100% có ghi nhớ; bổ sung Sổ nợ An Tâm trong nhóm dự án đã thực hiện; Contact Form cùng điện thoại/Zalo/Facebook/email lấy từ trang tham chiếu Bidicomed. Toàn bộ timeline và các dự án/chứng nhận trước đó được giữ nguyên.
+
+## Kiểm tra trước triển khai
+
+- Responsive 1440, 1024, 768, 390 và 320 px: không tràn ngang, không lỗi JavaScript, toàn bộ ảnh tải đúng.
+- Âm lượng thay đổi đúng, ghi nhớ sau reload; mở bảng âm lượng không tải/phát nhạc; Escape đóng bảng và trả focus về nút.
+- Dự án tất cả có 7 thẻ; nhóm đang phát triển vẫn có 1 thẻ; Sổ nợ An Tâm có link đúng ứng dụng và bản dịch Việt/Anh.
+- Nút cuộn 19%/21%, bật/tắt nhạc, timeline, bộ lọc, menu và hộp chứng nhận: đạt.
+- axe-core WCAG A/AA trên desktop 1440 và mobile 390 px: 0 vi phạm tự động phát hiện.
+- Contact Form: bắt buộc họ tên/email/lời nhắn/đồng ý xử lý; Reply-To đúng email người gửi; xử lý thành công, phản hồi thiếu success, lỗi dịch vụ, lỗi mạng và yêu cầu kích hoạt; giữ bản nháp khi chưa xác nhận gửi; chặn bản gửi trùng trong 60 giây; trạng thái song ngữ. Các phản hồi email được mô phỏng trong kiểm thử, không gửi thư thử thật.
+
+## Gửi email thực tế
+
+Contact Form dùng `https://formsubmit.co/ajax/kieumanh2211@gmail.com`, cùng cơ chế với trang tham chiếu. FormSubmit có thể yêu cầu chủ hộp thư nhấn Activate Form trong email khi sử dụng lần đầu trên Portfolio. Báo cáo này không xác nhận đã nhận email thực tế. Website chỉ báo dịch vụ đã tiếp nhận khi phản hồi có success=true; không có auto retry khi kết quả gửi chưa rõ.
+
+Điện thoại/Zalo 0388.000.680, Facebook `https://www.facebook.com/kieumanh.zenblog/` và email `kieumanh2211@gmail.com` được trích trực tiếp từ trang nguồn. Không tạo hoặc thay đổi backend, DNS hay repository khác.
+
+---
+
 # Portfolio — QA ngày 08/10/2026
 
 Bản triển khai: https://kieumanh.github.io/Portfolio/

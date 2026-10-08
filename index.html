@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=1.2.0" />
-  <link rel="stylesheet" href="audio-player.css?v=1.2.0" />
+  <link rel="stylesheet" href="styles.css?v=1.3.0" />
+  <link rel="stylesheet" href="audio-player.css?v=1.3.0" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -90,18 +90,35 @@
           <div class="certificate-grid" id="certificateGrid"></div><p class="credentials-note" data-i18n="credentialsNote">Các giấy chứng nhận được trình bày theo đúng tên khóa học và nội dung tài liệu. Chứng nhận hoàn thành học phần không được diễn giải thành bằng tốt nghiệp.</p>
         </div></section>
 
-    <section class="closing section" id="contact"><div class="container closing-grid"><div><div class="eyebrow dark"><span class="eyebrow-line"></span><span data-i18n="contactKicker">05 · MỘT CUỘC GẶP GỠ MỚI</span></div><h2 class="closing-title" data-i18n-html="contactTitle">Có một câu chuyện<br/>đáng kể cùng nhau?<br/><em>Mình rất muốn lắng nghe.</em></h2><p data-i18n="contactP">Nếu những điều tôi đang học, đang làm có thể đóng góp cho dự án của bạn, hãy bắt đầu bằng một lời chào.</p><div class="contact-actions"><a class="btn btn-dark" href="mailto:kieumanh2211@gmail.com?subject=Ket%20noi%20cung%20Kieu%20Manh"><span data-i18n="contactEmail">Gửi email cho Mạnh</span><span>↗</span></a><button class="copy-button" id="copyEmail" type="button" data-i18n="copyEmail">Sao chép email ↗</button></div></div><div class="contact-postcard"><div class="postcard-top"><span>KM. / 2026</span><span class="stamp">✳</span></div><div class="postcard-message" data-i18n-html="postcard">Chúc cho những việc mình làm<br/>đều bắt đầu bằng sự chân thành<br/>và kết thúc bằng một chút an lành.</div><div class="postcard-bottom"><span>KIỀU XUÂN MẠNH</span><span>✧</span></div></div></div></section>
+    <section class="closing section" id="contact"><div class="container closing-grid"><div><div class="eyebrow dark"><span class="eyebrow-line"></span><span data-i18n="contactKicker">05 · MỘT CUỘC GẶP GỠ MỚI</span></div><h2 class="closing-title" data-i18n-html="contactTitle">Có một câu chuyện<br/>đáng kể cùng nhau?<br/><em>Mình rất muốn lắng nghe.</em></h2><p data-i18n="contactP">Nếu những điều tôi đang học, đang làm có thể đóng góp cho dự án của bạn, hãy bắt đầu bằng một lời chào.</p><div class="contact-actions"><a class="btn btn-dark" href="mailto:kieumanh2211@gmail.com?subject=Ket%20noi%20cung%20Kieu%20Manh"><span data-i18n="contactEmail">Gửi email cho Mạnh</span><span>↗</span></a><button class="copy-button" id="copyEmail" type="button" data-i18n="copyEmail">Sao chép email ↗</button></div></div><div class="contact-postcard"><div class="postcard-top"><span>KM. / 2026</span><span class="stamp">✳</span></div><div class="postcard-message" data-i18n-html="postcard">Chúc cho những việc mình làm<br/>đều bắt đầu bằng sự chân thành<br/>và kết thúc bằng một chút an lành.</div><div class="postcard-bottom"><span>KIỀU XUÂN MẠNH</span><span>✧</span></div></div></div><div class="contact-form-grid">
+  <aside class="contact-details" aria-labelledby="contactMethods"><h3 id="contactMethods" data-i18n="contactMethods">Các cách kết nối</h3><dl><dt data-i18n="contactPhone">Điện thoại / Zalo</dt><dd><a href="tel:+84388000680">0388.000.680</a><div class="contact-mini"><a href="tel:+84388000680" data-i18n="callNow">Gọi điện ↗</a><a href="https://zalo.me/0388000680" target="_blank" rel="noopener noreferrer" data-i18n="zaloNow">Nhắn Zalo ↗</a></div></dd><dt>Email</dt><dd><a href="mailto:kieumanh2211@gmail.com">kieumanh2211@gmail.com</a></dd><dt>Facebook</dt><dd><a href="https://www.facebook.com/kieumanh.zenblog/" target="_blank" rel="noopener noreferrer">Kiều Mạnh · Zenblog ↗</a></dd></dl></aside>
+  <form id="contactForm" class="contact-form" action="https://formsubmit.co/kieumanh2211@gmail.com" method="POST" aria-labelledby="formTitle">
+  <h3 id="formTitle" data-i18n="formTitle">Gửi một lời nhắn đến Mạnh</h3><p data-i18n="formIntro">Chia sẻ câu hỏi, ý tưởng hoặc lời mời đồng hành. Mạnh sẽ phản hồi qua email bạn cung cấp.</p>
+  <div class="contact-fields"><div><label for="contactName" data-i18n="formName">Họ và tên</label><input id="contactName" name="name" autocomplete="name" required maxlength="100" /></div><div><label for="contactEmail" data-i18n="formEmail">Email phản hồi</label><input id="contactEmail" name="email" type="email" autocomplete="email" required maxlength="160" /></div></div>
+  <label for="contactPhone" data-i18n="formPhone">Điện thoại / Zalo (không bắt buộc)</label><input id="contactPhone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
+  <label for="contactMessage" data-i18n="formMessage">Lời nhắn</label><textarea id="contactMessage" name="message" required minlength="10" maxlength="3000" rows="6"></textarea>
+  <div class="form-honey" aria-hidden="true"><label for="contactWebsite">Website</label><input id="contactWebsite" name="_honey" tabindex="-1" autocomplete="off" /></div>
+  <input type="hidden" name="_subject" value="Lời nhắn từ Portfolio Kiều Mạnh" /><input type="hidden" name="_template" value="table" /><input type="hidden" name="_url" value="https://kieumanh.github.io/Portfolio/" />
+  <label class="contact-consent"><input type="checkbox" id="contactConsent" required /><span data-i18n="formConsent">Tôi đồng ý để thông tin này được dùng để tiếp nhận và phản hồi lời nhắn.</span></label>
+  <div class="contact-form-actions"><button class="btn btn-dark" type="submit" data-i18n="formSubmit">Gửi lời nhắn ↗</button><button id="contactCopy" class="copy-button" type="button" data-i18n="formCopy">Sao chép lời nhắn</button></div>
+  <p class="contact-form-note" data-i18n="formNote">Lời nhắn được xử lý qua FormSubmit và chuyển đến email của Mạnh. Nếu đây là lần đầu sử dụng, Mạnh cần xác nhận email kích hoạt để nhận thư.</p><p id="contactStatus" class="contact-status" role="status" aria-live="polite"></p>
+  </form></div></section>
   </main>
   <footer class="footer"><div class="container footer-grid"><div><span class="footer-mark">km✳</span><p data-i18n="footerP">Một trang nhật ký được viết bằng trải nghiệm, lòng biết ơn và những điều còn đang học.</p></div><div class="footer-right"><div class="footer-social"><a href="https://www.facebook.com/kieumanh.zenblog/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.youtube.com/@minhtrietthiendinh" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://huongthiennature.com/vi/" target="_blank" rel="noopener noreferrer">Hương Thiền Nature ↗</a></div><div class="footer-bottom"><span>© 2026 KIỀU XUÂN MẠNH</span><a href="#top" data-i18n="backTop">VỀ ĐẦU TRANG ↑</a></div></div></div></footer>
   <dialog id="certDialog" class="cert-dialog" aria-labelledby="dialogTitle"><div class="dialog-top"><strong id="dialogTitle">Chứng nhận</strong><button class="dialog-close" id="dialogClose" type="button" aria-label="Đóng">✕</button></div><img id="dialogImage" alt="" /><div class="dialog-bottom"><a id="dialogPdf" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Xem PDF gốc ↗</a></div></dialog>
   <audio id="ambientAudio" src="assets/hiro-background.mp3" preload="none" loop></audio>
+  <div class="music-controls" id="musicControls" data-tone="dark">
   <button id="musicToggle" type="button" class="music-toggle" data-tone="light" aria-label="Bật nhạc nền" aria-pressed="false" title="Bật nhạc nền">
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
     <span class="music-caption-wrap"><span class="music-caption">Nhạc nền</span><span class="music-status" role="status" aria-live="polite">Đã tắt</span></span>
     <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
   </button>
+  <button id="volumeToggle" type="button" class="volume-toggle" aria-label="Chỉnh âm lượng" aria-expanded="false" aria-controls="volumePanel" title="Chỉnh âm lượng"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="18" r="2" fill="currentColor"/></svg></button>
+  <div id="volumePanel" class="volume-panel" hidden><div class="volume-heading"><label for="musicVolume" id="volumeLabel">Âm lượng</label><output id="volumeValue" for="musicVolume">34%</output></div><input id="musicVolume" type="range" min="0" max="100" step="1" value="34" aria-valuetext="34%" /></div>
+  </div>
   <button id="backToTop" type="button" class="back-to-top" aria-label="Về đầu trang" aria-hidden="true" tabindex="-1" title="Về đầu trang">↑</button>
-  <script src="script.js?v=1.2.0" defer></script>
-  <script src="audio-player.js?v=1.2.0" defer></script>
+  <script src="script.js?v=1.3.0" defer></script>
+  <script src="audio-player.js?v=1.3.0" defer></script>
+  <script src="contact-form.js?v=1.3.0" defer></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-# Kiều Xuân Mạnh — Portfolio v1.2
+# Kiều Xuân Mạnh — Portfolio v1.3
 
 Website portfolio tĩnh, song ngữ Việt–Anh, responsive. Dùng HTML, CSS, JavaScript thuần: không yêu cầu build, không có backend, không cần Lovable credits.
 
@@ -57,3 +57,12 @@ Xem `SOURCES.md`.
 - Ba ảnh WebP được xuất từ đúng PDF gốc; đầy đủ PDF trong `documents/`.
 - Bảng màu thiên nhiên sáng hơn, tăng độ tương phản chữ phụ; nội dung và timeline được giữ nguyên.
 - Kết quả kiểm thử: xem `QA.md`.
+
+## 1.3 — Kết nối và âm lượng
+
+- Làm sáng lớp phủ và họa tiết nền hero; giữ nguyên SVG và chân dung.
+- Thanh âm lượng 0–100%, ghi nhớ mức âm lượng trên thiết bị; thay đổi âm lượng không tự phát hoặc tải nhạc.
+- Bổ sung dự án đã hoàn thiện Sổ nợ An Tâm với link ứng dụng, bằng tiếng Việt và tiếng Anh.
+- Contact Form qua FormSubmit, gửi tới `kieumanh2211@gmail.com`. Có kiểm tra dữ liệu, honeypot, chống bấm/gửi lặp, timeout 20 giây và sao chép nội dung dự phòng.
+- Khi FormSubmit yêu cầu kích hoạt, chủ hộp thư cần nhấn Activate Form trong email. Không coi việc dịch vụ tiếp nhận là bằng chứng thư đã vào inbox.
+- Thông tin liên lạc được đối chiếu từ trang Bidicomed: 0388.000.680, Zalo, Facebook Zenblog và email.

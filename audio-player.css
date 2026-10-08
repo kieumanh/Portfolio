@@ -100,3 +100,43 @@ body { background: var(--cream); }
 .postcard-top, .postcard-bottom { color: #586b52; }
 .footer p, .footer-bottom { color: #d5dccd; }
 .quote-grid blockquote em { color: #586b52; }
+/* v1.3: brighter hero landscape without replacing the original illustration. */
+.hero { background: #4c6a54; }
+.hero:before { background: radial-gradient(ellipse at 20% 10%,rgba(183,206,150,.13),transparent 46%),linear-gradient(103deg,rgba(12,32,20,.35) 0%,rgba(12,32,20,.12) 64%,rgba(18,40,30,.03)); }
+.hero-engraving { opacity: .78; }
+@media (max-width: 900px) { .hero-engraving { opacity: .6; } }
+.music-controls { position: fixed; left: max(20px,env(safe-area-inset-left)); bottom: max(20px,env(safe-area-inset-bottom)); z-index: 110; display: flex; align-items: center; gap: 8px; }
+.music-controls .music-toggle { position: static; }
+.volume-toggle { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid #ffffff33; background: #264733; color: #fffaf0; box-shadow: 0 6px 24px #1a2c1c33; transition: background-color .28s,color .28s; }
+.music-controls[data-tone='dark'] .volume-toggle { background: #fff8ea; color: #203d2d; border-color: #1d39242e; }
+.volume-toggle:focus-visible { outline: 3px solid #d9b76d; outline-offset: 3px; }
+.volume-panel { position: absolute; left: 0; bottom: calc(100% + 12px); width: 230px; max-width: calc(100vw - 32px); padding: 18px; background: #fff8ea; color: #203d2d; border: 1px solid #d6dccf; border-radius: 16px; box-shadow: 0 8px 30px #0003; }
+.volume-panel[hidden] { display: none; }
+.volume-heading { display: flex; justify-content: space-between; gap: 12px; font-size: 12px; font-weight: 700; }
+.volume-panel input { width: 100%; min-height: 44px; margin: 10px 0 0; accent-color: #264733; cursor: pointer; }
+@media (max-width: 570px) { .music-controls { left: max(12px,env(safe-area-inset-left)); bottom: max(14px,env(safe-area-inset-bottom)); } }
+.contact-form-grid { width: min(1180px,calc(100% - 88px)); margin: 76px auto 0; padding-top: 60px; border-top: 1px solid #c9d3c4; display: grid; grid-template-columns: .68fr 1fr; gap: 70px; align-items: start; }
+.contact-form-grid h3 { margin: 0 0 24px; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.35; }
+.contact-details dl { margin: 0; }
+.contact-details dt { font-size: 11px; font-weight: 800; color: #586b52; margin: 26px 0 8px; }
+.contact-details dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+.contact-details a { text-decoration: underline; text-underline-offset: 4px; }
+.contact-mini { display: flex; gap: 20px; margin-top: 14px; font-size: 12px; flex-wrap: wrap; }
+.contact-form { border: 1px solid #d6dccf; background: #fffdf8; padding: 32px; min-width: 0; border-radius: 4px; }
+.contact-form > p { color: #586b52; font-size: 12px; line-height: 1.9; }
+.contact-form label { display: block; font-size: 12px; font-weight: 700; margin: 18px 0 8px; }
+.contact-form input:not([type='checkbox']):not([type='hidden']), .contact-form textarea { width: 100%; min-height: 46px; border: 1px solid #aebba8; border-radius: 4px; padding: 12px; font: inherit; font-size: 14px; background: #fff; color: #24372a; }
+.contact-form textarea { resize: vertical; min-height: 140px; }
+.contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 3px solid #b38a36; outline-offset: 2px; }
+.contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.contact-form .contact-consent { display: flex; align-items: start; gap: 10px; line-height: 1.8; font-weight: 500; }
+.contact-consent input { width: 20px; height: 20px; flex: 0 0 20px; margin: 1px 0 0; accent-color: #264733; }
+.contact-form-actions { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; margin-top: 24px; }
+.contact-form button:disabled { opacity: .7; cursor: wait; }
+.contact-form .contact-form-note { font-size: 11px; margin-top: 22px; }
+.contact-form .contact-status { font-weight: 700; color: #264733; margin-bottom: 0; }
+.form-honey { display: none; }
+@media (max-width: 900px) { .contact-form-grid { grid-template-columns: 1fr; gap: 36px; } }
+@media (max-width: 570px) { .contact-form-grid { width: calc(100% - 36px); margin-top: 48px; padding-top: 40px; } .contact-form { padding: 22px 18px; } .contact-fields { grid-template-columns: 1fr; gap: 0; } .contact-form-grid h3 { font-size: 25px; } }
+.brand-copy small { opacity: .88; }
+.hero-engraving { -webkit-mask-image: linear-gradient(90deg,transparent,#000 22%); mask-image: linear-gradient(90deg,transparent,#000 22%); }

@@ -11,10 +11,41 @@
   let loading = false;
   let failed = false;
   let scrollQueued = false;
-  audio.volume = 0.34;
+  const volume = document.getElementById('musicVolume');
+  const volumeToggle = document.getElementById('volumeToggle');
+  const volumePanel = document.getElementById('volumePanel');
+  let savedVolume = 34;
+  try { const saved = localStorage.getItem('km-portfolio-volume'); if (saved !== null && Number.isFinite(Number(saved))) savedVolume = Math.max(0, Math.min(100, Number(saved))); } catch (_) {}
+  audio.volume = savedVolume / 100;
+  if (volume) volume.value = String(savedVolume);
+  function renderVolume() {
+    if (!volume) return;
+    const en = document.documentElement.lang === 'en';
+    document.getElementById('volumeLabel').textContent = en ? 'Volume' : 'Âm lượng';
+    document.getElementById('volumeValue').value = volume.value + '%';
+    volume.setAttribute('aria-valuetext', volume.value + '%');
+    volumeToggle.setAttribute('aria-label', en ? 'Adjust volume' : 'Chỉnh âm lượng');
+    volumeToggle.title = volumeToggle.getAttribute('aria-label');
+  }
+  function closeVolume() { volumePanel.hidden = true; volumeToggle.setAttribute('aria-expanded', 'false'); }
+  volumeToggle?.addEventListener('click', () => {
+    volumePanel.hidden = !volumePanel.hidden;
+    volumeToggle.setAttribute('aria-expanded', String(!volumePanel.hidden));
+    if (!volumePanel.hidden) volume.focus();
+  });
+  volume?.addEventListener('input', () => {
+    audio.volume = Number(volume.value) / 100;
+    try { localStorage.setItem('km-portfolio-volume', volume.value); } catch (_) {}
+    renderVolume();
+  });
+  document.addEventListener('pointerdown', event => { if (!event.target.closest('#musicControls')) closeVolume(); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !volumePanel.hidden) { closeVolume(); volumeToggle.focus(); }
+  });
   audio.loop = true;
 
   function render() {
+    renderVolume();
     const en = document.documentElement.lang === 'en';
     const playing = !audio.paused && !audio.ended;
     music.classList.toggle('is-playing', playing);
@@ -68,6 +99,7 @@
         return r.top <= y && r.bottom > y;
       });
       control.dataset.tone = current?.matches('.hero, .practice-section, .footer, .is-dark') ? 'dark' : 'light';
+      if (control === music) document.getElementById('musicControls').dataset.tone = control.dataset.tone;
     }
   }
   function enqueueScrollUpdate() {
