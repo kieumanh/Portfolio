@@ -107,7 +107,7 @@ function translateStatic(){
   query('langToggle').setAttribute('aria-label',language==='vi'?'Switch to English':'Chuyển sang tiếng Việt');
   query('menuToggle').setAttribute('aria-label',language==='vi'?'Mở menu':'Open menu');
   query('dialogClose').setAttribute('aria-label',language==='vi'?'Đóng':'Close');
-  renderTimeline();renderProjects();renderCertificates();
+  renderTimeline();renderProjects();renderFeatured();renderCertificates();
 }
 function renderTimeline(){
   const t=translations[language];
