@@ -114,7 +114,13 @@ body { background: var(--cream); }
 .volume-panel[hidden] { display: none; }
 .volume-heading { display: flex; justify-content: space-between; gap: 12px; font-size: 12px; font-weight: 700; }
 .volume-panel input { width: 100%; min-height: 44px; margin: 10px 0 0; accent-color: #264733; cursor: pointer; }
-@media (max-width: 570px) { .music-controls { left: max(12px,env(safe-area-inset-left)); bottom: max(14px,env(safe-area-inset-bottom)); } }
+.sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
+@media (max-width: 570px) {
+  .music-controls { left: max(12px,env(safe-area-inset-left)); bottom: max(14px,env(safe-area-inset-bottom)); gap: 0; }
+  .music-controls .music-toggle { width: 44px; height: 44px; min-width: 44px; min-height: 44px; padding: 10px; gap: 0; }
+  .music-controls .volume-toggle { display: none; }
+  .music-controls .volume-panel { width: 220px; }
+}
 .contact-form-grid { width: min(1180px,calc(100% - 88px)); margin: 76px auto 0; padding-top: 60px; border-top: 1px solid #c9d3c4; display: grid; grid-template-columns: .68fr 1fr; gap: 70px; align-items: start; }
 .contact-form-grid h3 { margin: 0 0 24px; font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.35; }
 .contact-details dl { margin: 0; }

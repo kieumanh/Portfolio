@@ -108,11 +108,12 @@
   <dialog id="certDialog" class="cert-dialog" aria-labelledby="dialogTitle"><div class="dialog-top"><strong id="dialogTitle">Chứng nhận</strong><button class="dialog-close" id="dialogClose" type="button" aria-label="Đóng">✕</button></div><img id="dialogImage" alt="" /><div class="dialog-bottom"><a id="dialogPdf" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Xem PDF gốc ↗</a></div></dialog>
   <audio id="ambientAudio" src="assets/hiro-background.mp3" preload="none" loop></audio>
   <div class="music-controls" id="musicControls" data-tone="dark">
-  <button id="musicToggle" type="button" class="music-toggle" data-tone="light" aria-label="Bật nhạc nền" aria-pressed="false" title="Bật nhạc nền">
+  <button id="musicToggle" type="button" class="music-toggle" data-tone="light" aria-label="Bật nhạc nền" aria-describedby="mobileVolumeHint" aria-keyshortcuts="ArrowUp ArrowDown" aria-pressed="false" title="Bật nhạc nền">
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
     <span class="music-caption-wrap"><span class="music-caption">Nhạc nền</span><span class="music-status" role="status" aria-live="polite">Đã tắt</span></span>
     <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
   </button>
+  <span id="mobileVolumeHint" class="sr-only">Chạm giữ để chỉnh âm lượng. Dùng bàn phím: nhấn mũi tên lên hoặc xuống khi nút này được chọn.</span>
   <button id="volumeToggle" type="button" class="volume-toggle" aria-label="Chỉnh âm lượng" aria-expanded="false" aria-controls="volumePanel" title="Chỉnh âm lượng"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="18" r="2" fill="currentColor"/></svg></button>
   <div id="volumePanel" class="volume-panel" hidden><div class="volume-heading"><label for="musicVolume" id="volumeLabel">Âm lượng</label><output id="volumeValue" for="musicVolume">34%</output></div><input id="musicVolume" type="range" min="0" max="100" step="1" value="34" aria-valuetext="34%" /></div>
   </div>

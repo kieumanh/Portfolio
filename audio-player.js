@@ -14,6 +14,9 @@
   const volume = document.getElementById('musicVolume');
   const volumeToggle = document.getElementById('volumeToggle');
   const volumePanel = document.getElementById('volumePanel');
+  const mobileVolumeHint = document.getElementById('mobileVolumeHint');
+  let holdTimer = 0;
+  let suppressNextMusicClick = false;
   let savedVolume = 34;
   try { const saved = localStorage.getItem('km-portfolio-volume'); if (saved !== null && Number.isFinite(Number(saved))) savedVolume = Math.max(0, Math.min(100, Number(saved))); } catch (_) {}
   audio.volume = savedVolume / 100;
@@ -26,12 +29,48 @@
     volume.setAttribute('aria-valuetext', volume.value + '%');
     volumeToggle.setAttribute('aria-label', en ? 'Adjust volume' : 'Chỉnh âm lượng');
     volumeToggle.title = volumeToggle.getAttribute('aria-label');
+    mobileVolumeHint.textContent = en
+      ? 'Touch and hold for volume. With a keyboard, use the up or down arrow while this button is focused.'
+      : 'Chạm giữ để chỉnh âm lượng. Dùng bàn phím: nhấn mũi tên lên hoặc xuống khi nút này được chọn.';
   }
   function closeVolume() { volumePanel.hidden = true; volumeToggle.setAttribute('aria-expanded', 'false'); }
+  function openVolume() {
+    volumePanel.hidden = false;
+    volumeToggle.setAttribute('aria-expanded', 'true');
+    volume.focus();
+  }
   volumeToggle?.addEventListener('click', () => {
     volumePanel.hidden = !volumePanel.hidden;
     volumeToggle.setAttribute('aria-expanded', String(!volumePanel.hidden));
     if (!volumePanel.hidden) volume.focus();
+  });
+  // On phones, the music control is the only visible button. A press-and-hold
+  // opens the same volume slider; keyboard users can use ArrowUp/ArrowDown.
+  music.addEventListener('pointerdown', event => {
+    if (event.pointerType !== 'touch' && event.pointerType !== 'pen') return;
+    suppressNextMusicClick = false;
+    clearTimeout(holdTimer);
+    holdTimer = window.setTimeout(() => {
+      suppressNextMusicClick = true;
+      openVolume();
+    }, 550);
+  });
+  for (const eventName of ['pointerup', 'pointercancel', 'pointerleave']) {
+    music.addEventListener(eventName, () => clearTimeout(holdTimer));
+  }
+  music.addEventListener('contextmenu', event => {
+    if (!matchMedia('(max-width: 570px)').matches) return;
+    event.preventDefault();
+    clearTimeout(holdTimer);
+    suppressNextMusicClick = true;
+    openVolume();
+  });
+  music.addEventListener('keydown', event => {
+    if (!matchMedia('(max-width: 570px)').matches || !['ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    event.preventDefault();
+    if (volumePanel.hidden) openVolume();
+    volume.value = String(Math.max(0, Math.min(100, Number(volume.value) + (event.key === 'ArrowUp' ? 5 : -5))));
+    volume.dispatchEvent(new Event('input', {bubbles: true}));
   });
   volume?.addEventListener('input', () => {
     audio.volume = Number(volume.value) / 100;
@@ -40,7 +79,10 @@
   });
   document.addEventListener('pointerdown', event => { if (!event.target.closest('#musicControls')) closeVolume(); });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && !volumePanel.hidden) { closeVolume(); volumeToggle.focus(); }
+    if (event.key === 'Escape' && !volumePanel.hidden) {
+      closeVolume();
+      (matchMedia('(max-width: 570px)').matches ? music : volumeToggle).focus();
+    }
   });
   audio.loop = true;
 
@@ -62,6 +104,7 @@
     backTop.title = backTop.getAttribute('aria-label');
   }
   music.addEventListener('click', async () => {
+    if (suppressNextMusicClick) { suppressNextMusicClick = false; return; }
     requested = !requested;
     failed = false;
     if (!requested) {
