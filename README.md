@@ -48,3 +48,11 @@ Xem `SOURCES.md`.
 - GitHub Pages URL (sau khi bật): https://kieumanh.github.io/Portfolio/
 - Source: `Deploy from a branch`, `main`, `/(root)`.
 - Dùng asset path tương đối để hỗ trợ deployment vào `/Portfolio/`.
+
+## 1.1 – Music & accessibility
+
+- Background music: `assets/hiro-sight-of-wonders-128.mp3` (optimized to 128 kbps); attempts autoplay, falls back to the first user interaction when a browser blocks audible autoplay; floating bilingual toggle.
+- Back-to-top control appears at 20% scroll progress, with reduced-motion support.
+- Floating button colors adapt to the underlying section; mobile-safe positioning.
+- Certificate previews and PDFs are included in the repository.
+- Playback is opt-out (preference saved locally). Publish audio only if its distribution license covers your website.
