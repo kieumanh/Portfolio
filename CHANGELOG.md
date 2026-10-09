@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.6
+- Mở rộng hồ sơ Sổ nợ An Tâm bằng nhận diện, bảng màu, typography, họa tiết, bảo mật, tính năng và cách tiếp cận quản lý nợ.
+- Đồng bộ nền xanh lá của thẻ dự án với ứng dụng; bổ sung hình minh họa Pixabay có ghi nguồn.
+- Cập nhật hồ sơ Việt/Anh và làm mới cache tài nguyên.
+
 ## 2.0.5
 - Bổ sung mốc tự học lập trình phần mềm giai đoạn 2018–2019 vào timeline tiếng Việt và tiếng Anh.
 - Làm mới cache tài nguyên để nội dung mới hiển thị trên GitHub Pages.

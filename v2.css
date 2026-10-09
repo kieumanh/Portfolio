@@ -7,3 +7,83 @@
 /* Prevent contact action labels from clipping in narrow form layouts. */
 .contact-form-actions{min-width:0;align-items:center}.contact-form-actions>.btn,.contact-form-actions>.copy-button{max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;text-align:center;line-height:1.45}.contact-form-actions .copy-button{display:inline-flex;align-items:center;justify-content:center;flex:0 1 auto;min-height:44px;padding:10px 14px;border:1px solid #aebba8;border-radius:999px;background:#f7f8f1;color:#36523d}.contact-form-actions .copy-button:hover{background:#eaf0e4;border-color:#789176}.contact-form-actions .btn{flex:0 1 auto}
 @media(max-width:570px){.contact-form-actions{gap:10px}.contact-form-actions>.btn,.contact-form-actions>.copy-button{flex:0 1 auto;padding-inline:12px}}
+
+
+/* An Tâm product identity and case-study sections */
+.v2-art.so-no-an-tam{background:linear-gradient(140deg,#103d2f 0%,#167b63 56%,#27a178 100%);color:#f5fff8}
+.v2-art.so-no-an-tam:before{border-color:#e7f3e75c}
+.v2-art.so-no-an-tam span{font-family:var(--serif);text-shadow:0 2px 20px #08291f55}
+.debt-case .case-lead{max-width:780px}
+.debt-case-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:24px 0 30px}
+.debt-visual{position:relative;isolation:isolate;min-height:300px;height:auto;margin:32px 0 56px;padding:24px 38px;display:grid;grid-template-columns:minmax(190px,.78fr) minmax(0,1.22fr);gap:34px;align-items:center;overflow:hidden;border-radius:26px;background:linear-gradient(132deg,#103d2f,#167b63 56%,#27a178);color:#f8fff9}
+.debt-visual:before,.debt-visual:after{content:"";position:absolute;z-index:-1;border:1px solid #e8f7ed38;border-radius:50%;width:360px;height:360px;right:-92px;top:-196px}
+.debt-visual:after{width:250px;height:250px;right:38%;top:auto;bottom:-205px}
+.debt-logo-plate{width:min(100%,300px);padding:12px;border-radius:20px;background:#fffef9;box-shadow:0 16px 40px #092d1d35}
+.debt-logo-plate img{display:block;width:100%;height:auto;border-radius:12px}
+.debt-visual-copy .eyebrow{margin:0 0 18px;color:#d8eee1;font-size:10px;letter-spacing:.16em}
+.debt-visual-copy blockquote{margin:0;font:400 clamp(25px,3.6vw,40px)/1.35 var(--serif);letter-spacing:-.02em}
+.debt-visual-copy blockquote em{color:#e8d59a}
+.debt-visual-copy>span{display:block;margin-top:20px;color:#d9ece1;font-size:12px;letter-spacing:.08em}
+.case-product-section{margin:54px 0 0;padding:34px 0 0;border-top:1px solid #d7decf}
+.case-product-section>.eyebrow{margin:0 0 12px;color:#526451;font-size:10px;font-weight:800;letter-spacing:.16em}
+.case-product-section>h2{max-width:760px;margin:0 0 18px;color:#263d30;font:500 clamp(27px,3.7vw,40px)/1.28 var(--serif)}
+.product-intro,.case-product-section>p:not(.eyebrow):not(.behavior-note):not(.behavior-sources):not(.product-caveat){max-width:820px;color:#526451;font-size:16px;line-height:1.85}
+.product-design-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:26px 0}
+.design-card{min-width:0;padding:18px;border:1px solid #dce5da;border-radius:18px;background:#f7f9f4}
+.design-card img{display:block;width:100%;height:190px;object-fit:contain;margin:0 auto 14px}
+.design-card h3{margin:8px 0;color:#294334;font-size:17px;line-height:1.45}
+.design-card p{margin:0;color:#526451;font-size:13px;line-height:1.8}
+.design-logo-card{background:#fffef9}
+.design-palette{grid-row:span 2}
+.palette-list{display:grid;gap:10px}
+.palette-list>span{display:grid;grid-template-columns:20px minmax(0,1fr) auto;align-items:center;gap:8px;font-size:11px}
+.palette-list i{width:18px;height:18px;border:1px solid #00000012;border-radius:6px;background:var(--swatch)}
+.palette-list b{font-size:11px;font-weight:600}
+.palette-list code{color:#617366;font:10px ui-monospace,SFMono-Regular,Consolas,monospace}
+.slogan-explainer{margin:26px 0 8px;padding:22px 24px;border-left:3px solid #bc862f;border-radius:0 16px 16px 0;background:#f4f6ed;color:#405b48;font:italic 17px/1.8 var(--serif)}
+.slogan-explainer strong{font-style:normal;color:#254536}
+.debt-illustration{max-width:760px;margin:28px 0 0}
+.debt-illustration img{display:block;width:100%;max-height:390px;object-fit:cover;border-radius:18px;background:#f1f3ef}
+.debt-illustration figcaption{margin-top:9px;color:#71806e;font-size:12px;line-height:1.7}
+.debt-illustration a,.behavior-sources a{color:#23684f;text-decoration:underline;text-underline-offset:3px}
+.debt-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:25px 0}
+.debt-feature-grid article,.behavior-grid article{padding:20px;border:1px solid #dce5da;border-radius:16px;background:#f8faf6}
+.debt-feature-grid article>span{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e1eee5;color:#167b63;font-size:10px;font-weight:800}
+.debt-feature-grid h3,.behavior-grid h3{margin:12px 0 7px;color:#294334;font-size:17px;line-height:1.45}
+.debt-feature-grid p,.behavior-grid p{margin:0;color:#526451;font-size:13px;line-height:1.8}
+.feature-security{grid-column:1/-1;background:#eff6ef!important}
+.behavior-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+.behavior-grid small{color:#71816b;font-size:9px;font-weight:800;letter-spacing:.14em}
+.behavior-grid p+p{margin-top:8px}
+.behavior-grid b{color:#365740}
+.behavior-note,.product-caveat{padding:16px 18px;border-radius:12px;background:#f2f5eb;color:#586b52;font-size:13px;line-height:1.8}
+.behavior-sources{margin-top:12px;color:#71806e;font-size:12px;line-height:1.8}
+.debt-steps{display:grid;gap:10px;margin:22px 0;padding:0;list-style:none;counter-reset:steps}
+.debt-steps li{position:relative;counter-increment:steps;padding:15px 18px 15px 54px;border:1px solid #dce5da;border-radius:14px;background:#f8faf6;color:#526451;font-size:14px;line-height:1.75}
+.debt-steps li:before{content:counter(steps,decimal-leading-zero);position:absolute;left:16px;top:17px;color:#167b63;font-size:11px;font-weight:800}
+.debt-steps b{color:#294334}
+.product-caveat{margin-top:20px;background:#fff7e8;color:#705b32}
+.debt-cta{margin-top:54px;padding:28px;border:1px solid #d5e3d6;border-radius:20px;background:#eff6ef}
+.debt-cta>p:not(.eyebrow){max-width:670px;color:#526451;font-size:15px;line-height:1.8}
+.debt-cta .btn{margin-top:8px}
+@media(max-width:760px){
+ .debt-visual{min-height:0;padding:22px;grid-template-columns:minmax(125px,.7fr) minmax(0,1.3fr);gap:20px;border-radius:20px}
+ .debt-logo-plate{max-width:230px;padding:8px;border-radius:15px}
+ .debt-visual-copy .eyebrow{font-size:8px}
+ .debt-visual-copy blockquote{font-size:clamp(22px,4.4vw,32px)}
+ .product-design-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .design-card img{height:160px}
+}
+@media(max-width:560px){
+ .debt-case-actions{gap:14px}
+ .debt-visual{grid-template-columns:1fr;justify-items:center;text-align:center;padding:22px 18px;gap:18px}
+ .debt-logo-plate{width:190px}
+ .debt-visual-copy .eyebrow{font-size:9px}
+ .debt-visual-copy>span{margin-top:12px}
+ .product-design-grid,.debt-feature-grid,.behavior-grid{grid-template-columns:1fr}
+ .design-card img{height:180px}
+ .palette-list>span{grid-template-columns:20px minmax(0,1fr) auto}
+ .feature-security{grid-column:auto}
+ .case-product-section{margin-top:38px;padding-top:27px}
+ .debt-cta{padding:21px}
+}
