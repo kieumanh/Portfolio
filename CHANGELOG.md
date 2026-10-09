@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.9
+- Sửa màu nền minh họa Sổ nợ An Tâm trên thẻ dự án, đồng bộ với nhận diện xanh lá của ứng dụng.
+- Bổ sung bộ phát nhạc dùng chung trên trang chủ và toàn bộ hồ sơ dự án.
+- Duy trì cùng một phần tử audio khi điều hướng nội bộ giữa các trang Portfolio để nhạc không bị ngắt; vẫn yêu cầu người dùng bấm phát và giữ tùy chỉnh âm lượng.
+- Cập nhật cache tài nguyên và phiên bản Portfolio.
+
 ## 2.0.8
 - Sửa font toàn website bằng bộ font hệ thống hỗ trợ tiếng Việt ổn định, bỏ tải Google Fonts không cần thiết.
 - Biên tập gọn hơn bài giới thiệu Sổ nợ An Tâm, giải thích cơ chế hành vi và bổ sung minh họa biên tập.

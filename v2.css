@@ -111,3 +111,6 @@ body.case-page{font-family:var(--sans)}
 .debt-routine-illustration{margin:26px 0 22px}
 .debt-routine-illustration img{display:block;width:100%;max-height:460px;object-fit:cover;border:1px solid #dce5da;border-radius:20px;background:#f3f8f4}
 @media(max-width:560px){.debt-routine-illustration img{max-height:300px;border-radius:15px}}
+
+/* 2.0.9: restore the An Tâm green identity on both project card variants. */
+.v2-art.so-no-an-tam{background:linear-gradient(140deg,#103d2f 0%,#167b63 56%,#27a178 100%)!important;color:#f5fff8!important}.v2-art.so-no-an-tam:before{border-color:#e7f3e75c!important}.v2-art.so-no-an-tam span{font-family:var(--serif);text-shadow:0 2px 20px #08291f99}.project-art.so-no-an-tam{background:linear-gradient(140deg,#103d2f 0%,#167b63 56%,#27a178 100%)!important;color:#f5fff8!important}.project-art.so-no-an-tam:before{border-color:#e7f3e75c!important}

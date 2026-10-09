@@ -146,7 +146,7 @@ function openCertificate(index){
 }
 function closeMenu(){query('mobileNav').hidden=true;query('menuToggle').setAttribute('aria-expanded','false')}
 
-query('langToggle').addEventListener('click',()=>{language=language==='vi'?'en':'vi';translateStatic()});
+window.initPortfolioPage = function(){ if(!query('featuredGrid')) return; language=document.documentElement.lang==='en'?'en':'vi'; showAllTimeline=false; activeProjectFilter='all'; query('langToggle').addEventListener('click',()=>{language=language==='vi'?'en':'vi';translateStatic()});
 query('menuToggle').addEventListener('click',()=>{const menu=query('mobileNav');menu.hidden=!menu.hidden;query('menuToggle').setAttribute('aria-expanded',String(!menu.hidden))});
 query('mobileNav').addEventListener('click',e=>{if(e.target.closest('a'))closeMenu()});
 query('timelineMore').addEventListener('click',()=>{showAllTimeline=!showAllTimeline;renderTimeline()});
@@ -159,3 +159,5 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 document.addEventListener('click',e=>{if(!e.target.closest('.header'))closeMenu()});
 window.addEventListener('resize',()=>{if(window.innerWidth>900)closeMenu()},{passive:true});
 translateStatic();
+};
+window.initPortfolioPage();
