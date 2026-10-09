@@ -116,7 +116,16 @@ function renderTimeline(){
   const b=query('timelineMore');b.querySelector('span:first-child').textContent=showAllTimeline?t.collapseMilestones:t.seeAllMilestones;b.querySelector('span:last-child').textContent=showAllTimeline?'−':'＋';b.setAttribute('aria-expanded',String(showAllTimeline));
 }
 function detailPath(p){return p.art==='fpt'?'projects/video-fpt/':p.art==='education'?'projects/hoc-thien-da-nang/':p.title.includes('An Tâm')?'projects/so-no-an-tam/':''}
-function renderFeatured(){const t=translations[language],items=t.projects.filter(p=>detailPath(p)).sort((a,b)=>Number(b.title.includes('An Tâm'))-Number(a.title.includes('An Tâm')));query('featuredGrid').innerHTML=items.map(p=>'<article class="v2-feature-card"><div class="v2-art '+textEscape(p.art)+'"><span>'+textEscape(p.artText)+'</span><small>KM · '+textEscape(p.date)+'</small></div><div class="v2-feature-copy"><small>'+textEscape(p.date)+' · '+textEscape(t.filterDone)+'</small><h3>'+textEscape(p.title)+'</h3><p>'+textEscape(p.description)+'</p><a href="'+(language==='en'?'/Portfolio/en/':'/Portfolio/')+detailPath(p)+'" class="project-link">'+textEscape(t.featureLink)+'</a></div></article>').join('')}
+function renderFeatured(){
+  const t=translations[language],order=['Sổ nợ An Tâm','Học Thiền Đà Nẵng','Gieo mầm Tỉnh Thức','Hương Thiền Nature'];
+  const statusLabel={done:t.filterDone,growing:t.filterGrowing,proposal:t.filterProposal};
+  const items=order.map(title=>t.projects.find(p=>p.title===title)).filter(Boolean);
+  query('featuredGrid').innerHTML=items.map(p=>{
+    const slug=detailPath(p),url=slug?(language==='en'?'/Portfolio/en/':'/Portfolio/')+slug:safeUrl(p.url||'#');
+    const label=slug?t.featureLink:(language==='en'?'Visit project ↗':'Xem dự án ↗');
+    return '<article class="v2-feature-card"><div class="v2-art '+textEscape(p.art)+'"><span>'+textEscape(p.artText)+'</span><small>KM · '+textEscape(p.date)+'</small></div><div class="v2-feature-copy"><small>'+textEscape(p.date)+' · '+textEscape(statusLabel[p.category])+'</small><h3>'+textEscape(p.title)+'</h3><p>'+textEscape(p.description)+'</p><a href="'+url+'" '+(slug?'':'target="_blank" rel="noopener noreferrer"')+' class="project-link">'+textEscape(label)+'</a></div></article>';
+  }).join('');
+}
 function renderProjects(){const t=translations[language],statusLabel={done:t.filterDone,growing:t.filterGrowing,proposal:t.filterProposal};const filtered=t.projects.filter(p=>activeProjectFilter==='all'||p.category===activeProjectFilter);query('projectsGrid').innerHTML=filtered.map((p,i)=>{const slug=detailPath(p),url=slug?(language==='en'?'/Portfolio/en/':'/Portfolio/')+slug:safeUrl(p.url||'#');return '<article class="project-card" style="animation-delay:'+i*35+'ms"><div class="project-art '+textEscape(p.art)+'" aria-hidden="true"><span>'+textEscape(p.artText)+'</span><span class="art-corner">KM / '+textEscape(p.date)+'</span></div><div class="project-body"><div class="project-meta"><span>'+textEscape(p.date)+'</span><span class="project-status">'+textEscape(statusLabel[p.category])+'</span></div><h3>'+textEscape(p.title)+'</h3><p>'+textEscape(p.description)+'</p><a href="'+url+'" '+(slug?'':'target="_blank" rel="noopener noreferrer" ')+'class="project-link">'+textEscape(slug?t.featureLink:p.category==='proposal'?t.viewProposal:t.viewProject)+'</a></div></article>'}).join('');document.querySelectorAll('.filter').forEach(b=>{const a=b.dataset.filter===activeProjectFilter;b.classList.toggle('active',a);b.setAttribute('aria-pressed',String(a))})}
 
 function renderCertificates(){
