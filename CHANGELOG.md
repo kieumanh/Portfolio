@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.5
+- Bổ sung mốc tự học lập trình phần mềm giai đoạn 2018–2019 vào timeline tiếng Việt và tiếng Anh.
+- Làm mới cache tài nguyên để nội dung mới hiển thị trên GitHub Pages.
+
 ## 2.0.4
 - Sửa hiển thị nút sao chép lời nhắn để chữ không tràn trên màn hình hẹp.
 - Làm rõ năng lực chụp ảnh, quay phim và hậu kỳ trong mô tả truyền thông sáng tạo.
