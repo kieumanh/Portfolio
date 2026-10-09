@@ -1,6 +1,8 @@
 'use strict';
 // Music starts only after an explicit click. No autoplay or gesture listeners.
 (() => {
+  if (window.__portfolioAudioPlayerInitialized) return;
+  window.__portfolioAudioPlayerInitialized = true;
   function ensurePlayer() {
     if (!document.getElementById('ambientAudio')) {
       const audio = document.createElement('audio'); audio.id = 'ambientAudio';
@@ -219,7 +221,10 @@
     pageMeta.set(fromKey,{title:document.title,lang:document.documentElement.lang,className:document.body.className,
       description:document.querySelector('meta[name="description"]')?.content||'',
       canonical:document.querySelector('link[rel="canonical"]')?.href||''});
-    while(document.body.firstChild) document.body.removeChild(document.body.firstChild);
+    for (const node of [...document.body.childNodes]) {
+      if (node.nodeType === 1 && persistentIds.includes(node.id)) continue;
+      node.remove();
+    }
     const key=url.pathname+url.search;
     if(pageCache.has(key)) {
       document.body.append(pageCache.get(key));
@@ -242,17 +247,20 @@
           if(typeof window.initPortfolioPage==='function') window.initPortfolioPage();
           else if(!window.portfolioScriptLoading) {
             window.portfolioScriptLoading=true;
-            const s=document.createElement('script'); s.src='/Portfolio/script.js?v=2.0.9';
+            const s=document.createElement('script'); s.src='/Portfolio/script.js?v=2.0.11';
             document.body.append(s);
           }
           if(!window.contactFormLoaded) {
             window.contactFormLoaded=true;
-            const f=document.createElement('script'); f.src='/Portfolio/contact-form.js?v=2.0.9'; document.body.append(f);
+            const f=document.createElement('script'); f.src='/Portfolio/contact-form.js?v=2.0.11'; document.body.append(f);
           }
         }
       } catch(_) { location.assign(url.href); return; }
     }
-    for(const id of persistentIds) { const node=persistentNodes[id]; if(node) document.body.append(node); }
+    for(const id of persistentIds) {
+      const node=persistentNodes[id];
+      if(node && node.parentNode !== document.body) document.body.append(node);
+    }
     activeKey=key;
     if(push) history.pushState({portfolio:true},'',url.href);
     else history.replaceState({portfolio:true},'',url.href);
