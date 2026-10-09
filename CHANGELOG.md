@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.10
+- Ngăn script của trang đích khởi tạo lại bộ phát nhạc dùng chung khi điều hướng mềm, tránh dừng nhạc giữa chừng.
+- Cập nhật URL cache và số phiên bản Portfolio.
+
 ## 2.0.9
 - Sửa màu nền minh họa Sổ nợ An Tâm trên thẻ dự án, đồng bộ với nhận diện xanh lá của ứng dụng.
 - Bổ sung bộ phát nhạc dùng chung trên trang chủ và toàn bộ hồ sơ dự án.

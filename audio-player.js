@@ -235,7 +235,7 @@
           canonical:doc.querySelector('link[rel="canonical"]')?.href||''};
         pageMeta.set(key,meta); applyMeta(meta);
         for(const node of [...doc.body.childNodes]) {
-          if(node.nodeType===1 && persistentIds.includes(node.id)) continue;
+          if(node.nodeType===1 && (persistentIds.includes(node.id) || node.tagName==='SCRIPT')) continue;
           document.body.append(node);
         }
         if(document.getElementById('featuredGrid')) {
