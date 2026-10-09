@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.12
+- Giữ phần tử audio được gắn liên tục trong DOM khi chuyển trang, tránh trình duyệt tự dừng phát lúc thay nội dung trang.
+- Làm mới URL cache và số phiên bản Portfolio.
+
 ## 2.0.10
 - Ngăn script của trang đích khởi tạo lại bộ phát nhạc dùng chung khi điều hướng mềm, tránh dừng nhạc giữa chừng.
 - Cập nhật URL cache và số phiên bản Portfolio.
