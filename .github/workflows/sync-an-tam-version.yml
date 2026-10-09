@@ -1,0 +1,68 @@
+name: Sync An Tam app version
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: sync-an-tam-app-version
+  cancel-in-progress: false
+jobs:
+  sync-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Read the published app version
+        id: version
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          app_url = "https://sono-v1.huongthiennature.com/"
+          class VersionParser(HTMLParser):
+              version = None
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() != "meta":
+                      return
+                  values = dict(attrs)
+                  if values.get("name", "").lower() == "application-version":
+                      self.version = values.get("content", "").strip()
+
+          request = Request(app_url, headers={"User-Agent": "Portfolio-version-sync"})
+          with urlopen(request, timeout=25) as response:
+              page = response.read().decode("utf-8", errors="replace")
+          parser = VersionParser()
+          parser.feed(page)
+          version = parser.version or ""
+          if not re.fullmatch(r"\d+\.\d+\.\d+(?:[-+][A-Za-z0-9.-]+)?", version):
+              raise SystemExit("Published app did not expose a valid application-version meta tag")
+          target = Path("assets/so-no-an-tam-version.json")
+          payload = {"version": version, "source": app_url}
+          encoded = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+          previous = target.read_text(encoding="utf-8") if target.exists() else ""
+          if previous == encoded:
+              changed = "false"
+          else:
+              target.write_text(encoded, encoding="utf-8")
+              changed = "true"
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              output.write(f"changed={changed}\n")
+          print(f"Published app version: {version}; changed={changed}")
+          PY
+      - name: Commit the updated badge source
+        if: steps.version.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/so-no-an-tam-version.json
+          git commit -m "Sync An Tam app version"
+          git push

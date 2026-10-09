@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.8
+- Sửa font toàn website bằng bộ font hệ thống hỗ trợ tiếng Việt ổn định, bỏ tải Google Fonts không cần thiết.
+- Biên tập gọn hơn bài giới thiệu Sổ nợ An Tâm, giải thích cơ chế hành vi và bổ sung minh họa biên tập.
+- Đồng nhất màu, độ tương phản và tracking của chú thích.
+- Thêm badge phiên bản ứng dụng; GitHub Actions kiểm tra trang Sổ nợ An Tâm mỗi 30 phút và tự cập nhật dữ liệu khi phiên bản đổi.
+- Cập nhật cache CSS và số phiên bản Portfolio trên toàn bộ trang.
+
+
 ## 2.0.7
 - Bổ sung phân tích giá trị của thanh tiến độ và biểu đồ donut: cách đọc tỷ lệ, giảm tải ghi nhớ, giới hạn diễn giải và vai trò của danh sách chi tiết.
 - Tạo hình minh họa mới theo bảng màu xanh lá An Tâm, ghi rõ đây là ảnh khái niệm chứ không phải dữ liệu thật.

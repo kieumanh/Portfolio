@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="portfolio-version" content="2.0.7">
+  <meta name="portfolio-version" content="2.0.8">
   <meta name="description" content="Explore the product design, brand identity, privacy features and practical debt-management approach behind An Tâm Debt Ledger.">
   <link rel="canonical" href="https://kieumanh.github.io/Portfolio/en/projects/so-no-an-tam/">
   <meta property="og:title" content="An Tâm Debt Ledger — Product Design & Debt Management">
   <meta property="og:description" content="Know who you owe, repay one step at a time, and find more peace each day.">
   <meta property="og:image" content="https://kieumanh.github.io/Portfolio/assets/so-no-an-tam-logo.webp">
-  <link rel="stylesheet" href="/Portfolio/styles.css?v=2.0.7">
-  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.7">
+  <link rel="stylesheet" href="/Portfolio/styles.css?v=2.0.8">
+  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.8">
   <link rel="icon" href="/Portfolio/assets/favicon.svg">
   <title>An Tâm Debt Ledger — Product Design & Debt Management | Kieu Manh</title>
 </head>
@@ -32,6 +32,7 @@
       <a class="btn btn-dark" href="https://sono-v1.huongthiennature.com/" target="_blank" rel="noopener noreferrer">Open the app ↗</a>
       <a class="text-link" href="/Portfolio/en/#projects">Back to projects →</a>
     </div>
+    <p class="app-version-line">Live app version: <strong id="appVersion" aria-live="polite">v1.6.4</strong><span>Synced automatically from the running app</span></p>
 
     <section class="debt-visual" aria-label="An Tâm brand identity">
       <div class="debt-logo-plate">
@@ -87,7 +88,7 @@
         </article>
         <article class="design-card">
           <h3>Typography and reading rhythm</h3>
-          <p>The app uses a compact sans-serif system stack for legible numbers and statuses: <strong>Tahoma, Arial, Helvetica Neue, Roboto</strong>. System fonts keep loading light and feel familiar across devices. The Portfolio case study uses <strong>Playfair Display</strong> for editorial headings and <strong>DM Sans / Manrope</strong> for copy and navigation; that is the storytelling layer, not the app’s UI font.</p>
+          <p>The app uses system sans-serif fonts for readable amounts and status labels, avoiding external font downloads. The Portfolio pairs a system serif for editorial headings with a system sans-serif for body copy; both render Vietnamese reliably across common devices.</p>
         </article>
         <article class="design-card">
           <h3>Motifs and hierarchy</h3>
@@ -140,15 +141,20 @@
 
     <section class="case-product-section debt-behavior">
       <p class="eyebrow">05 · PSYCHOLOGY MEETS PRACTICE</p>
-      <h2>Reduce what people must remember; make starting easier</h2>
-      <p class="product-intro">People who struggle to manage debt are not necessarily short on good intentions. They may be juggling many figures, afraid to look at the situation or unsure which debt to address first. When information is scattered, avoidance can feel easier in the moment but makes due dates and progress harder to predict. An Tâm addresses the part a tool can address: make the facts visible, the next action concrete and the record reviewable.</p>
+      <h2>Reduce the mental load; make the first step clear</h2>
+      <p class="product-intro">Debt can be hard to manage because of uncertainty, overload or avoidance—not simply a lack of willpower. Holding many figures in mind makes the next action harder to see; avoidance may bring short relief while leaving dates and balances unclear. The app lowers friction by gathering facts, clarifying actions and keeping a reviewable record.</p>
+      <figure class="debt-routine-illustration">
+        <img src="/Portfolio/assets/an-tam-calm-routine.webp" alt="A person calmly reviewing a calendar and financial notes beside a phone and a green plant" width="1400" height="933" loading="lazy" decoding="async">
+        <figcaption>An editorial illustration of turning mental reminders into reviewable steps; not an app screenshot or user data.</figcaption>
+      </figure>
       <div class="behavior-grid">
-        <article><small>FRICTION · UNCERTAINTY</small><h3>“How much do I owe, and to whom?”</h3><p><b>Mechanism:</b> the overview and creditor records gather information in one place, reducing the burden on working memory.</p><p><b>Practice:</b> enter the balance, due date and verification status; review once a week.</p></article>
-        <article><small>FRICTION · PROCRASTINATION</small><h3>“I’ll deal with it later; I’m afraid to see the number.”</h3><p><b>Mechanism:</b> neutral wording, hidden amounts and a lock reduce judgment and privacy concerns.</p><p><b>Practice:</b> open the app to do one small task: verify one due date or record one payment.</p></article>
-        <article><small>FRICTION · MISSED DATES</small><h3>“I’m not sure when the next payment is due.”</h3><p><b>Mechanism:</b> the calendar and reminders put an intention on a specific date; “projected” stays distinct from “verified.”</p><p><b>Practice:</b> confirm the real due date and installment amount before setting a budget.</p></article>
-        <article><small>FRICTION · DISCOURAGEMENT</small><h3>“I’ve paid, but I still don’t feel progress.”</h3><p><b>Mechanism:</b> the ledger and progress view make recorded actions visible. That feedback can support consistency; it does not promise a fast payoff.</p><p><b>Practice:</b> record a transaction after paying and review progress monthly.</p></article>
+        <article><small>FRICTION · UNCERTAINTY</small><h3>“How much do I owe, and to whom?”</h3><p><b>Mechanism:</b> one record for each creditor reduces working-memory demands.</p><p><b>Practice:</b> confirm balances and due dates; review weekly.</p></article>
+        <article><small>FRICTION · AVOIDANCE</small><h3>“I’ll deal with it later; I fear the number.”</h3><p><b>Mechanism:</b> neutral language, hidden amounts and a lock reduce judgment and privacy concerns.</p><p><b>Practice:</b> do one small task: verify a due date or record a payment.</p></article>
+        <article><small>FRICTION · MISSED DATES</small><h3>“When is the next payment due?”</h3><p><b>Mechanism:</b> calendar reminders attach an intention to a date while keeping projected plans distinct from verified obligations.</p><p><b>Practice:</b> confirm the date and installment with the creditor.</p></article>
+        <article><small>FRICTION · DISCOURAGEMENT</small><h3>“I paid, but can’t see progress.”</h3><p><b>Mechanism:</b> a ledger and progress view make recorded effort visible, providing feedback that can support a routine.</p><p><b>Practice:</b> log a payment after making it; review monthly.</p></article>
       </div>
-      <p class="behavior-note">This is a behavioral-design interpretation of the current features, not a promise to treat anxiety or eliminate debt. The app organizes and tracks information; repayment still depends on income, creditor terms and a plan that protects essential needs.</p><p class="behavior-sources">The <a href="https://www.consumerfinance.gov/consumer-tools/financial-well-being/about/" target="_blank" rel="noopener noreferrer">CFPB financial well-being framework</a> emphasizes day-to-day financial control and progress toward goals. Research on the mental-accounting costs of multiple debts helps explain why a consolidated record may be useful, but that study did not evaluate this app: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6462060/" target="_blank" rel="noopener noreferrer">PNAS research paper</a>.</p>
+      <p class="behavior-note"><strong>Limits:</strong> this is a behavioral-design interpretation, not a promise to treat anxiety or eliminate debt. The app helps organize information; repayment still depends on cash flow and creditor terms.</p>
+      <p class="behavior-sources">The <a href="https://www.consumerfinance.gov/consumer-tools/financial-well-being/about/" target="_blank" rel="noopener noreferrer">CFPB financial well-being framework</a> highlights day-to-day financial control. Research on the cognitive burden of scarcity helps explain why organizing information may help, but it did not evaluate this app: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6462060/" target="_blank" rel="noopener noreferrer">PNAS study</a>.</p>
     </section>
 
     <section class="case-product-section debt-method">
@@ -173,6 +179,7 @@
 
     <div class="case-links"><a href="https://sono-v1.huongthiennature.com/" target="_blank" rel="noopener noreferrer">Open the app ↗</a><a href="/Portfolio/en/#projects">All projects →</a><a href="/Portfolio/en/#contact">Discuss a project →</a></div>
   </main>
-  <footer class="case-footer">© 2026 KIEU XUAN MANH · v2.0.7</footer>
+  <footer class="case-footer">© 2026 KIEU XUAN MANH · v2.0.8</footer>
+  <script>(function(){var b=document.getElementById("appVersion");if(!b)return;fetch("/Portfolio/assets/so-no-an-tam-version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(/^\d+\.\d+\.\d+(?:[-+][\w.-]+)?$/.test(d.version)){b.textContent="v"+d.version;b.setAttribute("aria-label","An Tam app version v"+d.version)}}).catch(function(){b.textContent="Unavailable"})})();</script>
 </body>
 </html>
