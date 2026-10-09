@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.4
+- Sửa hiển thị nút sao chép lời nhắn để chữ không tràn trên màn hình hẹp.
+- Làm rõ năng lực chụp ảnh, quay phim và hậu kỳ trong mô tả truyền thông sáng tạo.
+
+# Changelog
+
 ## 2.0.3
 - Bổ sung định hướng xây dựng thương hiệu, truyền thông doanh nghiệp và vai trò phù hợp.
 - Thêm minh họa chuyển động, có hỗ trợ giảm chuyển động.
