@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.7
+- Bổ sung phân tích giá trị của thanh tiến độ và biểu đồ donut: cách đọc tỷ lệ, giảm tải ghi nhớ, giới hạn diễn giải và vai trò của danh sách chi tiết.
+- Tạo hình minh họa mới theo bảng màu xanh lá An Tâm, ghi rõ đây là ảnh khái niệm chứ không phải dữ liệu thật.
+- Cập nhật hồ sơ Việt/Anh, phiên bản và URL cache.
+
 ## 2.0.6
 - Mở rộng hồ sơ Sổ nợ An Tâm bằng nhận diện, bảng màu, typography, họa tiết, bảo mật, tính năng và cách tiếp cận quản lý nợ.
 - Đồng bộ nền xanh lá của thẻ dự án với ứng dụng; bổ sung hình minh họa Pixabay có ghi nguồn.

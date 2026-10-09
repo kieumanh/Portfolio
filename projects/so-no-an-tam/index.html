@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="portfolio-version" content="2.0.6">
+  <meta name="portfolio-version" content="2.0.7">
   <meta name="description" content="Khám phá thiết kế sản phẩm, nhận diện thương hiệu, tính năng bảo mật và cách Sổ nợ An Tâm giúp việc quản lý công nợ rõ ràng, có kế hoạch hơn.">
   <link rel="canonical" href="https://kieumanh.github.io/Portfolio/projects/so-no-an-tam/">
   <meta property="og:title" content="Sổ nợ An Tâm — thiết kế sản phẩm & quản lý công nợ">
   <meta property="og:description" content="Biết rõ mình nợ ai, trả từng bước, an tâm từng ngày.">
   <meta property="og:image" content="https://kieumanh.github.io/Portfolio/assets/so-no-an-tam-logo.webp">
-  <link rel="stylesheet" href="/Portfolio/styles.css?v=2.0.6">
-  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.6">
+  <link rel="stylesheet" href="/Portfolio/styles.css?v=2.0.7">
+  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.7">
   <link rel="icon" href="/Portfolio/assets/favicon.svg">
   <title>Sổ nợ An Tâm — Thiết kế sản phẩm & quản lý công nợ | Kiều Mạnh</title>
 </head>
@@ -109,10 +109,37 @@
         <article><span>06</span><h3>Riêng tư ngay trong thao tác</h3><p>Tìm nhanh khoản nợ, ẩn số tiền trên màn hình, khóa két và tự khóa khi không tương tác. Lời nhắc hạn giúp đưa việc cần làm ra khỏi trí nhớ mà không cần nhìn số dư liên tục.</p></article>
         <article class="feature-security"><span>07</span><h3>Két dữ liệu mã hóa</h3><p>Ứng dụng công bố mã hóa AES-256-GCM trên thiết bị và dẫn xuất khóa PBKDF2-HMAC-SHA-256 với 310.000 vòng. Máy chủ Cloudflare lưu bản mã hóa; mật khẩu và khóa không được gửi lên máy chủ. Tài khoản và két dữ liệu dùng hai lớp mật khẩu riêng.</p></article>
       </div>
+    <section class="case-product-section debt-visualization">
+      <p class="eyebrow">04 · TIẾN ĐỘ NHÌN THẤY ĐƯỢC</p>
+      <h2>Thanh tiến độ và biểu đồ tròn giúp đọc bức tranh nợ ra sao?</h2>
+      <p class="product-intro">Sổ nợ An Tâm dùng thanh progress trên bảng tổng quan và biểu đồ donut trong báo cáo để diễn đạt hai tỷ lệ cốt lõi: phần nghĩa vụ đã thanh toán và phần còn phải trả. Chúng biến những con số phải tự cộng trừ thành một tín hiệu thị giác có thể hiểu nhanh, rồi dẫn người dùng về các khoản cụ thể để kiểm tra.</p>
+      <figure class="debt-chart-illustration">
+        <img src="/Portfolio/assets/an-tam-progress-visual.webp" alt="Minh họa khái niệm thanh tiến độ và biểu đồ tròn bằng các sắc xanh lá, không chứa dữ liệu tài chính thực" width="1200" height="800" loading="lazy" decoding="async">
+        <figcaption>Minh họa khái niệm do AI tạo cho hồ sơ sản phẩm; không phải ảnh chụp ứng dụng hoặc kết quả của một người dùng.</figcaption>
+      </figure>
+      <div class="debt-visualization-grid">
+        <article>
+          <span>01 · PROGRESS BAR</span>
+          <h3>Cho thấy hướng đi và phần đã hoàn tất</h3>
+          <p>Thanh tiến độ đặt số đã trả cạnh tổng nghĩa vụ được ghi nhận, để người dùng nhận ra phần đã xử lý và phần còn lại trong một lần nhìn. Khi có giao dịch mới, trạng thái trực quan tạo phản hồi dễ nhận biết, giúp người dùng theo dõi nhịp thực hiện thay vì chỉ nhớ một khoản nợ lớn.</p>
+        </article>
+        <article>
+          <span>02 · BIỂU ĐỒ DONUT</span>
+          <h3>Đặt từng phần trong tổng thể</h3>
+          <p>Vòng tròn chia tổng nghĩa vụ thành phần đã thanh toán và chưa thanh toán; tỷ lệ ở tâm cùng chú giải bên cạnh giúp so sánh nhanh hai phần. Cách trình bày này phù hợp với báo cáo tổng hợp, nơi người dùng cần lùi lại để nhìn toàn cảnh trước khi xem chi tiết.</p>
+        </article>
+        <article>
+          <span>03 · ĐỌC CÙNG NHAU</span>
+          <h3>Tổng quan để định hướng, danh sách để hành động</h3>
+          <p>Progress bar dễ đọc như một hành trình; donut làm rõ quan hệ phần–toàn thể. Hai hình thức bổ trợ khi xuất hiện ở những ngữ cảnh khác nhau, nhưng sẽ lặp thông tin nếu đặt cạnh nhau mà không có mục đích riêng. Muốn biết chủ nợ nào, ngày nào cần xử lý và số dư từng khoản, người dùng vẫn cần danh sách công nợ và lịch trả.</p>
+        </article>
+      </div>
+      <p class="behavior-note"><strong>Giá trị thiết kế:</strong> hình ảnh hóa giúp giảm việc phải tự ghi nhớ và tính toán, chuyển sự chú ý từ “một khối nợ mơ hồ” sang tỷ lệ có thể kiểm tra. Một thay đổi nhỏ nhìn thấy được có thể củng cố cảm giác đang chủ động, nhưng không bảo đảm người dùng trả nợ nhanh hơn.</p>
+      <p class="product-caveat"><strong>Đọc đúng chỉ số:</strong> phần trăm là tỷ lệ trên nghĩa vụ đã được nhập (đã trả + còn phải trả), không phải thời gian đã đi qua, điểm tín dụng hay dự báo ngày tất toán. Độ tin cậy phụ thuộc vào dữ liệu đủ và chính xác; tỷ lệ này không tự tính lãi tương lai, phí phạt hoặc thay đổi điều khoản. Hãy đối chiếu với xác nhận của chủ nợ và xem từng khoản trước khi lập kế hoạch.</p>
     </section>
 
     <section class="case-product-section debt-behavior">
-      <p class="eyebrow">04 · TỪ CƠ CHẾ TÂM LÝ ĐẾN CÁCH LÀM THỰC TẾ</p>
+      <p class="eyebrow">05 · TỪ CƠ CHẾ TÂM LÝ ĐẾN CÁCH LÀM THỰC TẾ</p>
       <h2>Giảm gánh phải nhớ, tăng khả năng bắt đầu</h2>
       <p class="product-intro">Người quản lý nợ chưa tốt thường không thiếu thiện chí; họ có thể đang phải xoay xở nhiều con số, sợ nhìn thấy tình hình, hoặc không biết nên bắt đầu từ khoản nào. Khi thông tin rời rạc, né tránh đem lại dễ chịu tức thời nhưng khiến hạn trả và tiến độ càng khó đoán. Sổ nợ An Tâm xử lý phần có thể xử lý bằng cách làm cho dữ kiện rõ, bước tiếp theo cụ thể và lịch sử có thể đối chiếu.</p>
       <div class="behavior-grid">
@@ -125,7 +152,7 @@
     </section>
 
     <section class="case-product-section debt-method">
-      <p class="eyebrow">05 · MỘT QUY TRÌNH CÓ THỂ DUY TRÌ</p>
+      <p class="eyebrow">06 · MỘT QUY TRÌNH CÓ THỂ DUY TRÌ</p>
       <h2>Rõ khoản nợ · xác nhận kỳ hạn · ghi từng bước</h2>
       <ol class="debt-steps">
         <li><b>Gom dữ liệu.</b> Liệt kê chủ nợ, dư nợ, số tiền kỳ, ngày đến hạn và điều gì còn chưa chắc.</li>
@@ -146,6 +173,6 @@
 
     <div class="case-links"><a href="https://sono-v1.huongthiennature.com/" target="_blank" rel="noopener noreferrer">Mở ứng dụng ↗</a><a href="/Portfolio/#projects">Tất cả dự án →</a><a href="/Portfolio/#contact">Trao đổi về dự án →</a></div>
   </main>
-  <footer class="case-footer">© 2026 KIỀU XUÂN MẠNH · v2.0.6</footer>
+  <footer class="case-footer">© 2026 KIỀU XUÂN MẠNH · v2.0.7</footer>
 </body>
 </html>

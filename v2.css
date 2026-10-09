@@ -87,3 +87,15 @@
  .case-product-section{margin-top:38px;padding-top:27px}
  .debt-cta{padding:21px}
 }
+
+/* An Tâm progress and debt-share explainer */
+.debt-chart-illustration{margin:26px 0 22px}
+.debt-chart-illustration img{display:block;width:100%;max-height:470px;object-fit:cover;border:1px solid #dce5da;border-radius:20px;background:#f3f8f4}
+.debt-chart-illustration figcaption{margin-top:9px;color:#71806e;font-size:12px;line-height:1.7}
+.debt-visualization-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:24px 0}
+.debt-visualization-grid article{padding:20px;border:1px solid #dce5da;border-radius:16px;background:#f8faf6}
+.debt-visualization-grid article>span{color:#167b63;font-size:10px;font-weight:800;letter-spacing:.08em}
+.debt-visualization-grid h3{margin:12px 0 7px;color:#294334;font-size:17px;line-height:1.45}
+.debt-visualization-grid p{margin:0;color:#526451;font-size:13px;line-height:1.8}
+@media(max-width:760px){.debt-visualization-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.debt-visualization-grid{grid-template-columns:1fr}.debt-chart-illustration img{max-height:300px;border-radius:15px}.debt-visualization-grid article{padding:17px}}
