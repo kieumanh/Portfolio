@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.3
+- Bổ sung định hướng xây dựng thương hiệu, truyền thông doanh nghiệp và vai trò phù hợp.
+- Thêm minh họa chuyển động, có hỗ trợ giảm chuyển động.
+- Gọn form liên hệ, bo góc mềm hơn; cải thiện thao tác giữ nút nhạc để mở âm lượng trên mobile.
+
+# Changelog
+
 ## 2.0.1
 - Làm mới URL cache cho script và giao diện sau khi sửa lỗi đường dẫn tiếng Anh và thứ tự dự án nổi bật.
 - Cập nhật số phiên bản hiển thị trên hai ngôn ngữ.

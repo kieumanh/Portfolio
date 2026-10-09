@@ -170,3 +170,5 @@ body { background: var(--cream); }
 }
 .brand-copy small { opacity: .88; }
 .hero-engraving { -webkit-mask-image: linear-gradient(90deg,transparent,#000 22%); mask-image: linear-gradient(90deg,transparent,#000 22%); }
+
+@media (max-width:570px){.music-controls .music-toggle{touch-action:none;-webkit-user-select:none;user-select:none}.music-controls .volume-panel{left:0;bottom:calc(100% + 12px);border-radius:18px;padding:16px;box-shadow:0 12px 36px #17332235}}

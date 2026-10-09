@@ -1,5 +1,5 @@
-# QA v2.0.1
+# QA v2.0.3
 
-Kiểm tra trực tiếp trên GitHub Pages sau phát hành: trang VI/EN, nội dung dự án, các hồ sơ dự án và canonical. Đã xác nhận ba ảnh WebP tải được khi cuộn tới mục Học vấn; đường dẫn PDF gốc còn hoạt động. Nút về đầu trang hiện sau khi cuộn cuối trang; giao diện nhạc có nút bật/tắt và điều chỉnh âm lượng, không tự phát khi chưa tương tác. Thẻ dự án Sổ nợ An Tâm được ưu tiên đầu nhóm nổi bật.
+Đã kiểm tra cú pháp JavaScript bằng Node.js. GitHub Pages sau phát hành cần kiểm tra lại trực tiếp. Nội dung mới có bản Việt/Anh; hình minh họa chuyển động tắt hoạt ảnh khi bật reduced motion. Nút nhạc mobile tiếp tục là nút đơn; chạm giữ mở thanh âm lượng, phím mũi tên điều chỉnh theo bước 5%. Không tự phát nhạc.
 
-FormSubmit chưa gửi thư thử để tránh gửi email thật. Nếu đây là lần đầu sử dụng, chủ email cần hoàn tất bước kích hoạt FormSubmit; trạng thái chuyển tiếp của dịch vụ không xác nhận thư đã vào hộp thư.
+Form dùng FormSubmit; chưa gửi thư thử để tránh tạo email thật. Lần đầu sử dụng có thể cần xác nhận email kích hoạt.

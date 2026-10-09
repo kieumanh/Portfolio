@@ -50,12 +50,13 @@
     if (event.pointerType !== 'touch' && event.pointerType !== 'pen') return;
     suppressNextMusicClick = false;
     clearTimeout(holdTimer);
+    try { music.setPointerCapture(event.pointerId); } catch (_) {}
     holdTimer = window.setTimeout(() => {
       suppressNextMusicClick = true;
       openVolume();
     }, 550);
   });
-  for (const eventName of ['pointerup', 'pointercancel', 'pointerleave']) {
+  for (const eventName of ['pointerup', 'pointercancel']) {
     music.addEventListener(eventName, () => clearTimeout(holdTimer));
   }
   music.addEventListener('contextmenu', event => {
