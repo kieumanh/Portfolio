@@ -10,7 +10,7 @@
   <meta property="og:description" content="Know who you owe, see every repayment step, and keep personal finances private.">
   <meta property="og:image" content="https://sono-v1.huongthiennature.com/social-preview-v1610.jpg">
   <link rel="stylesheet" href="/Portfolio/styles.css?v=2.0.14">
-  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.14.1"><link rel="stylesheet" href="/Portfolio/audio-player.css?v=2.0.14">
+  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.14.2"><link rel="stylesheet" href="/Portfolio/audio-player.css?v=2.0.14">
   <link rel="icon" href="/Portfolio/assets/favicon.svg">
   <title>An Tâm Debt Ledger — Product Design & Debt Management | Kieu Manh</title>
 </head>
@@ -56,6 +56,85 @@
     <section class="case-product-section">
       <p class="eyebrow">02 · THE ESSENTIALS</p>
       <h2>Useful debt tracking, without unnecessary complexity</h2>
+
+      <div class="debt-feature-showcase" data-debt-showcase aria-label="Interactive illustrations of app features">
+        <div class="debt-showcase-intro">
+          <div>
+            <p class="debt-showcase-kicker">INTERACTIVE FEATURE TOUR</p>
+            <h3>Explore three everyday moments</h3>
+          </div>
+          <p>Choose a tab to explore. The illustration also changes gently on screen.</p>
+        </div>
+        <div class="debt-showcase-nav" role="tablist" aria-label="Choose a feature preview">
+          <button class="debt-showcase-tab is-active" type="button" role="tab" id="at-feature-tab-0" aria-controls="at-feature-panel-0" aria-selected="true" tabindex="0"><span>01</span>Overview</button>
+          <button class="debt-showcase-tab" type="button" role="tab" id="at-feature-tab-1" aria-controls="at-feature-panel-1" aria-selected="false" tabindex="-1"><span>02</span>Repayment calendar</button>
+          <button class="debt-showcase-tab" type="button" role="tab" id="at-feature-tab-2" aria-controls="at-feature-panel-2" aria-selected="false" tabindex="-1"><span>03</span>Private vault</button>
+        </div>
+        <div class="debt-showcase-stage">
+          <section class="debt-showcase-panel is-active" id="at-feature-panel-0" role="tabpanel" aria-labelledby="at-feature-tab-0" tabindex="0">
+            <div class="debt-demo-shell">
+              <div class="debt-demo-top"><span class="debt-demo-brand"><i aria-hidden="true"></i>An Tâm · Demo</span><span class="debt-demo-tag">ILLUSTRATIVE DATA</span></div>
+              <div class="debt-demo-overview">
+                <div class="debt-demo-ringbox">
+                  <svg class="debt-demo-ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                    <circle class="debt-demo-ring-base" cx="60" cy="60" r="46"></circle>
+                    <circle class="debt-demo-ring-value" cx="60" cy="60" r="46"></circle>
+                  </svg>
+                  <div class="debt-demo-ring-label"><strong>60%</strong><small>Paid</small></div>
+                </div>
+                <div class="debt-demo-overview-info">
+                  <p class="debt-demo-kicker">REPAYMENT PROGRESS</p>
+                  <h4>Steady steps, clearer picture</h4>
+                  <div class="debt-demo-numbers">
+                    <div class="debt-demo-number"><small>Recorded as paid</small><strong>18,000,000 ₫</strong></div>
+                    <div class="debt-demo-number is-outstanding"><small>Still outstanding</small><strong>12,000,000 ₫</strong></div>
+                  </div>
+                  <div class="debt-demo-progress" aria-hidden="true"><span class="debt-demo-progress-fill"></span></div>
+                  <p class="debt-demo-hint"><span class="debt-demo-hint-mark" aria-hidden="true">✓</span>Payment recorded · Progress updated</p>
+                </div>
+              </div>
+            </div>
+            <p class="debt-demo-caption">Concept illustration: 30 million ₫ recorded in total, 60% marked as paid. No real account data.</p>
+          </section>
+          <section class="debt-showcase-panel" id="at-feature-panel-1" role="tabpanel" aria-labelledby="at-feature-tab-1" tabindex="0" hidden>
+            <div class="debt-demo-shell">
+              <div class="debt-demo-top"><span class="debt-demo-brand"><i aria-hidden="true"></i>An Tâm · Demo</span><span class="debt-demo-tag">ILLUSTRATIVE DATA</span></div>
+              <div class="debt-demo-week" aria-label="An example repayment week">
+                <span class="debt-demo-day"><small>Mon</small><strong>12</strong></span>
+            <span class="debt-demo-day"><small>Tue</small><strong>13</strong></span>
+            <span class="debt-demo-day"><small>Wed</small><strong>14</strong></span>
+            <span class="debt-demo-day is-due"><small>Thu</small><strong>15</strong></span>
+            <span class="debt-demo-day"><small>Fri</small><strong>16</strong></span>
+            <span class="debt-demo-day"><small>Sat</small><strong>17</strong></span>
+            <span class="debt-demo-day"><small>Sun</small><strong>18</strong></span>
+              </div>
+              <div class="debt-demo-reminder">
+                <span class="debt-demo-reminder-symbol" aria-hidden="true">◷</span>
+                <div><h4>Upcoming scheduled payment</h4><p>15th · Planned repayment · Not paid yet</p></div>
+              </div>
+            </div>
+            <p class="debt-demo-caption">A gentle reminder of what's next. A planned payment is not treated as a completed transaction.</p>
+          </section>
+          <section class="debt-showcase-panel" id="at-feature-panel-2" role="tabpanel" aria-labelledby="at-feature-tab-2" tabindex="0" hidden>
+            <div class="debt-demo-shell">
+              <div class="debt-demo-top"><span class="debt-demo-brand"><i aria-hidden="true"></i>An Tâm · Demo</span><span class="debt-demo-tag">ILLUSTRATIVE DATA</span></div>
+              <div class="debt-demo-security">
+                <div class="debt-demo-sec-node">
+                  <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="10" y="21" width="28" height="22" rx="5"></rect><path d="M16 21v-7a8 8 0 0 1 16 0v7"></path><circle cx="24" cy="32" r="2"></circle></svg>
+                  <strong>On your device</strong><small>Private records are encrypted locally</small>
+                </div>
+                <div class="debt-demo-sec-flow" aria-hidden="true"><span>Encrypted data</span><b>⟶</b></div>
+                <div class="debt-demo-sec-node">
+                  <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="8" width="32" height="10" rx="3"></rect><rect x="8" y="22" width="32" height="18" rx="3"></rect><path d="M15 13h5M15 28h5M15 34h10"></path></svg>
+                  <strong>Stored on the server</strong><small>Ciphertext only — the vault password stays private</small>
+                </div>
+              </div>
+            </div>
+            <p class="debt-demo-caption">An illustrative security flow, not an audit report. Email account recovery does not unlock the separate vault.</p>
+          </section>
+        </div>
+      </div>
+
       <div class="debt-feature-grid">
         <article><span>01</span><h3>Debt overview</h3><p>See recorded obligations, payments, outstanding balances, open debts and repayment progress on one screen.</p></article>
         <article><span>02</span><h3>Debts & creditors</h3><p>Track individual balances, dates, due periods, statuses and verified versus unverified entries.</p></article>
@@ -122,5 +201,6 @@
   </main>
   <footer class="case-footer">© 2026 KIEU XUAN MANH · Article updated 10.10.2026</footer>
   <script>(function(){var b=document.getElementById("appVersion");if(!b)return;fetch("/Portfolio/assets/so-no-an-tam-version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(/^\d+\.\d+\.\d+(?:[-+][\w.-]+)?$/.test(d.version)){b.textContent="v"+d.version;b.setAttribute("aria-label","An Tam app version v"+d.version)}}).catch(function(){b.textContent="v1.6.17"})})();</script>
+<script src="/Portfolio/assets/an-tam-feature-showcase.js?v=1.0.0" defer></script>
 <script src="/Portfolio/audio-player.js?v=2.0.14" defer></script></body>
 </html>
