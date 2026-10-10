@@ -51,6 +51,17 @@
     else if (reduced.addListener) reduced.addListener(schedule);
   }
   render(0, false);
+  /* Jumping back from the sync explainer also opens the private-vault tab. */
+  Array.prototype.slice.call(document.querySelectorAll('a[href="#at-feature-tab-2"]')).forEach(function (anchor) {
+    anchor.addEventListener("click", function () {
+      var tab = document.getElementById("at-feature-tab-2");
+      if (tab) tab.click();
+    });
+  });
+  if (window.location && window.location.hash === "#at-feature-tab-2") {
+    var requestedTab = document.getElementById("at-feature-tab-2");
+    if (requestedTab) requestedTab.click();
+  }
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(function (items) {
       visible = items[0].isIntersecting;
