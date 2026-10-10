@@ -10,7 +10,7 @@
   <meta property="og:description" content="Gom công nợ về một nơi. Rõ từng khoản, từng kỳ trả — bảo mật và nhẹ nhàng.">
   <meta property="og:image" content="https://sono-v1.huongthiennature.com/social-preview-v1610.jpg">
   <link rel="stylesheet" href="/Portfolio/styles.css?v=2.0.14">
-  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.14.1"><link rel="stylesheet" href="/Portfolio/audio-player.css?v=2.0.14">
+  <link rel="stylesheet" href="/Portfolio/v2.css?v=2.0.14.2"><link rel="stylesheet" href="/Portfolio/audio-player.css?v=2.0.14">
   <link rel="icon" href="/Portfolio/assets/favicon.svg">
   <title>Sổ nợ An Tâm — Thiết kế sản phẩm & quản lý công nợ | Kiều Mạnh</title>
 
@@ -70,6 +70,85 @@
     <section class="case-product-section">
       <p class="eyebrow">02 · ĐIỀU GÌ KHIẾN ỨNG DỤNG HỮU ÍCH?</p>
       <h2>Đủ tính năng cần thiết, bớt những điều gây xao nhãng</h2>
+
+      <div class="debt-feature-showcase" data-debt-showcase aria-label="Minh họa động các tính năng ứng dụng">
+        <div class="debt-showcase-intro">
+          <div>
+            <p class="debt-showcase-kicker">MINH HỌA TƯƠNG TÁC</p>
+            <h3>Ba góc nhìn trong một hành trình</h3>
+          </div>
+          <p>Chọn từng mục để xem. Minh họa cũng tự chuyển nhẹ khi bạn đang theo dõi.</p>
+        </div>
+        <div class="debt-showcase-nav" role="tablist" aria-label="Chọn minh họa tính năng">
+          <button class="debt-showcase-tab is-active" type="button" role="tab" id="at-feature-tab-0" aria-controls="at-feature-panel-0" aria-selected="true" tabindex="0"><span>01</span>Tổng quan</button>
+          <button class="debt-showcase-tab" type="button" role="tab" id="at-feature-tab-1" aria-controls="at-feature-panel-1" aria-selected="false" tabindex="-1"><span>02</span>Lịch trả</button>
+          <button class="debt-showcase-tab" type="button" role="tab" id="at-feature-tab-2" aria-controls="at-feature-panel-2" aria-selected="false" tabindex="-1"><span>03</span>Két riêng tư</button>
+        </div>
+        <div class="debt-showcase-stage">
+          <section class="debt-showcase-panel is-active" id="at-feature-panel-0" role="tabpanel" aria-labelledby="at-feature-tab-0" tabindex="0">
+            <div class="debt-demo-shell">
+              <div class="debt-demo-top"><span class="debt-demo-brand"><i aria-hidden="true"></i>An Tâm · Minh họa</span><span class="debt-demo-tag">DỮ LIỆU GIẢ ĐỊNH</span></div>
+              <div class="debt-demo-overview">
+                <div class="debt-demo-ringbox">
+                  <svg class="debt-demo-ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                    <circle class="debt-demo-ring-base" cx="60" cy="60" r="46"></circle>
+                    <circle class="debt-demo-ring-value" cx="60" cy="60" r="46"></circle>
+                  </svg>
+                  <div class="debt-demo-ring-label"><strong>60%</strong><small>Đã trả</small></div>
+                </div>
+                <div class="debt-demo-overview-info">
+                  <p class="debt-demo-kicker">TIẾN ĐỘ THANH TOÁN</p>
+                  <h4>Từng bước nhỏ, rõ hơn mỗi ngày</h4>
+                  <div class="debt-demo-numbers">
+                    <div class="debt-demo-number"><small>Đã ghi nhận trả</small><strong>18.000.000 ₫</strong></div>
+                    <div class="debt-demo-number is-outstanding"><small>Còn phải trả</small><strong>12.000.000 ₫</strong></div>
+                  </div>
+                  <div class="debt-demo-progress" aria-hidden="true"><span class="debt-demo-progress-fill"></span></div>
+                  <p class="debt-demo-hint"><span class="debt-demo-hint-mark" aria-hidden="true">✓</span>Ghi nhận khoản trả · Cập nhật tiến độ</p>
+                </div>
+              </div>
+            </div>
+            <p class="debt-demo-caption">Mô phỏng trên tổng số 30 triệu đồng, tỷ lệ đã trả 60%. Không sử dụng dữ liệu tài khoản thật.</p>
+          </section>
+          <section class="debt-showcase-panel" id="at-feature-panel-1" role="tabpanel" aria-labelledby="at-feature-tab-1" tabindex="0" hidden>
+            <div class="debt-demo-shell">
+              <div class="debt-demo-top"><span class="debt-demo-brand"><i aria-hidden="true"></i>An Tâm · Minh họa</span><span class="debt-demo-tag">DỮ LIỆU GIẢ ĐỊNH</span></div>
+              <div class="debt-demo-week" aria-label="Một tuần trả nợ minh họa">
+                <span class="debt-demo-day"><small>Th 2</small><strong>12</strong></span>
+            <span class="debt-demo-day"><small>Th 3</small><strong>13</strong></span>
+            <span class="debt-demo-day"><small>Th 4</small><strong>14</strong></span>
+            <span class="debt-demo-day is-due"><small>Th 5</small><strong>15</strong></span>
+            <span class="debt-demo-day"><small>Th 6</small><strong>16</strong></span>
+            <span class="debt-demo-day"><small>Th 7</small><strong>17</strong></span>
+            <span class="debt-demo-day"><small>CN</small><strong>18</strong></span>
+              </div>
+              <div class="debt-demo-reminder">
+                <span class="debt-demo-reminder-symbol" aria-hidden="true">◷</span>
+                <div><h4>Một kỳ trả đang tới</h4><p>Ngày 15 · Dự kiến thanh toán · Chưa ghi nhận đã trả</p></div>
+              </div>
+            </div>
+            <p class="debt-demo-caption">Nhắc việc đúng lúc, không nhầm khoản dự kiến với giao dịch đã hoàn thành.</p>
+          </section>
+          <section class="debt-showcase-panel" id="at-feature-panel-2" role="tabpanel" aria-labelledby="at-feature-tab-2" tabindex="0" hidden>
+            <div class="debt-demo-shell">
+              <div class="debt-demo-top"><span class="debt-demo-brand"><i aria-hidden="true"></i>An Tâm · Minh họa</span><span class="debt-demo-tag">DỮ LIỆU GIẢ ĐỊNH</span></div>
+              <div class="debt-demo-security">
+                <div class="debt-demo-sec-node">
+                  <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="10" y="21" width="28" height="22" rx="5"></rect><path d="M16 21v-7a8 8 0 0 1 16 0v7"></path><circle cx="24" cy="32" r="2"></circle></svg>
+                  <strong>Trên thiết bị của bạn</strong><small>Thông tin được mã hóa trước khi lưu</small>
+                </div>
+                <div class="debt-demo-sec-flow" aria-hidden="true"><span>Dữ liệu mã hóa</span><b>⟶</b></div>
+                <div class="debt-demo-sec-node">
+                  <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="8" y="8" width="32" height="10" rx="3"></rect><rect x="8" y="22" width="32" height="18" rx="3"></rect><path d="M15 13h5M15 28h5M15 34h10"></path></svg>
+                  <strong>Lưu trên máy chủ</strong><small>Chỉ lưu bản mã, không cần mật khẩu két</small>
+                </div>
+              </div>
+            </div>
+            <p class="debt-demo-caption">Mô phỏng nguyên lý bảo mật, không phải báo cáo kiểm toán. Khôi phục tài khoản email không tự mở được két.</p>
+          </section>
+        </div>
+      </div>
+
       <div class="debt-feature-grid">
         <article><span>01</span><h3>Tổng quan công nợ</h3><p>Xem tổng nghĩa vụ đã nhập, khoản đã trả, dư nợ còn lại, khoản đang mở và tỷ lệ hoàn thành trên cùng một màn hình.</p></article>
         <article><span>02</span><h3>Từng khoản, từng chủ nợ</h3><p>Quản lý số tiền, thời điểm ghi nhận, kỳ đến hạn, trạng thái và chi tiết từng khoản. Phân biệt số chưa xác minh với số đã đối chiếu.</p></article>
@@ -141,5 +220,6 @@
   </main>
   <footer class="case-footer">© 2026 KIỀU XUÂN MẠNH · Bài viết cập nhật 10.10.2026</footer>
   <script>(function(){var b=document.getElementById("appVersion");if(!b)return;fetch("/Portfolio/assets/so-no-an-tam-version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){if(/^\d+\.\d+\.\d+(?:[-+][\w.-]+)?$/.test(d.version)){b.textContent="v"+d.version;b.setAttribute("aria-label","Phiên bản ứng dụng Sổ nợ An Tâm v"+d.version)}}).catch(function(){b.textContent="v1.6.17"})})();</script>
+<script src="/Portfolio/assets/an-tam-feature-showcase.js?v=1.0.0" defer></script>
 <script src="/Portfolio/audio-player.js?v=2.0.14" defer></script></body>
 </html>
