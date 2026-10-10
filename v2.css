@@ -114,3 +114,29 @@ body.case-page{font-family:var(--sans)}
 
 /* 2.0.9: restore the An Tâm green identity on both project card variants. */
 .v2-art.so-no-an-tam{background:linear-gradient(140deg,#103d2f 0%,#167b63 56%,#27a178 100%)!important;color:#f5fff8!important}.v2-art.so-no-an-tam:before{border-color:#e7f3e75c!important}.v2-art.so-no-an-tam span{font-family:var(--serif);text-shadow:0 2px 20px #08291f99}.project-art.so-no-an-tam{background:linear-gradient(140deg,#103d2f 0%,#167b63 56%,#27a178 100%)!important;color:#f5fff8!important}.project-art.so-no-an-tam:before{border-color:#e7f3e75c!important}
+
+
+/* An Tâm typography: unified sans-serif, scoped to its case study */
+.case-main.debt-case,
+.case-main.debt-case * {
+  font-family: var(--sans);
+}
+.case-main.debt-case h1,
+.case-main.debt-case .case-product-section > h2 {
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+.case-main.debt-case .debt-visual-copy blockquote {
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+.case-main.debt-case .debt-visual-copy blockquote em {
+  font-style: normal;
+  font-weight: 700;
+}
+/* Keep the entire photographed notebook visible on phones and tablets. */
+.case-main.debt-case .debt-routine-illustration img {
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
