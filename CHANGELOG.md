@@ -1,3 +1,10 @@
+## v2.0.15 — 2026-10-10
+
+- Bổ sung bài giới thiệu **Zen Studio CMS** với câu chuyện ra đời, giải thích nhu cầu của người làm nội dung và so sánh cân bằng giữa WordPress.org, Publii, Ghost.
+- Thêm hai biểu đồ minh họa động (phân bổ sự chú ý và các điểm chạm công việc), hỗ trợ tương tác, đọc bằng công cụ trợ năng và chế độ giảm chuyển động. Các mô hình đều ghi rõ là dữ liệu giả định.
+- Thêm ảnh người thật từ Pixabay, chú thích canh giữa và dẫn nguồn; nút truy cập nền tảng web chính thức.
+- Đưa dự án Zen Studio vào danh sách và khu vực nổi bật (VI/EN), cập nhật bố cục thẻ, sitemap và số phiên bản.
+
 # Changelog
 
 ## 2.0.12
