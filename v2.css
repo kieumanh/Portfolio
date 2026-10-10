@@ -566,3 +566,9 @@ body.case-page{font-family:var(--sans)}
   .debt-feature-showcase *::before,
   .debt-feature-showcase *::after { animation:none!important;transition:none!important }
 }
+
+/* Zen Studio CMS feature art · v2.0.15 */
+.v2-art.zen-studio,.project-art.zen-studio{background:radial-gradient(circle at 74% 26%,#dbeacd55 0 15%,transparent 39%),linear-gradient(135deg,#183f32 0%,#366d51 56%,#b4c9a3 100%)!important;color:#f6fff4!important}
+.v2-art.zen-studio:before,.project-art.zen-studio:before{border-color:#dbeec788!important}
+.v2-art.zen-studio span,.project-art.zen-studio>span:first-child{font-family:var(--serif,Georgia,serif);text-shadow:0 2px 13px #183b3280}
+@media(min-width:1101px){.v2-featured .v2-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
