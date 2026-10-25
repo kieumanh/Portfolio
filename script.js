@@ -30,6 +30,7 @@ const translations = {
       {year:'2026',label:'AN NINH MẠNG & AI',title:'CCEP · Nhà báo 4.0 · Giáo dục thời AI',desc:'Đạt chứng nhận Certified Cybersecurity Educator Professional ngày 07/01/2026 và hoàn thành hai khóa AI for Impact về nội dung, quản trị và sáng tạo trong giáo dục.',url:'#learning',major:true},
     ],
     projects: [
+      {category:'done',date:'2026',title:'Kanban Zen Studio',description:'Không gian quản lý dự án tích hợp bảng Kanban, Timeline, Calendar, Gantt và ghi chú; xây dựng để hỗ trợ cá nhân và nhóm hoàn thành công việc theo từng bước.',art:'kanban-studio',artText:'Kanban Zen Studio',url:'/Portfolio/projects/kanban-studio-project/'},
       {category:'growing',date:'2026',title:'Zen Studio CMS',description:'Không gian quản trị bài viết và kho ảnh của Hương Thiền Nature: gọn gàng, tập trung nội dung, thiết kế theo công việc thực tế của người dùng.',art:'zen-studio',artText:'Zen Studio',url:'https://studio.huongthiennature.com/'},
       {category:'done',date:'2021–2022',title:'Gieo mầm Tỉnh Thức',description:'Sáng tạo nội dung, chia sẻ về thực hành thiền, khởi xướng câu lạc bộ và xây dựng các hoạt động kết nối cộng đồng, bao gồm Zen Coach 101.',art:'meditation',artText:'Gieo mầm',url:'https://www.youtube.com/@minhtrietthiendinh'},
       {category:'done',date:'01/2025',title:'Học Thiền Đà Nẵng',description:'Xây dựng website cho tổ chức Học Thiền Đà Nẵng, giúp nội dung thực hành thiền có một không gian số dễ tiếp cận.',art:'education',artText:'An trú',url:'https://www.hocthiendanang.com/'},
@@ -74,6 +75,7 @@ const translations = {
       {year:'2026',label:'CYBERSECURITY & AI',title:'CCEP · AI Journalism · AI in Education',desc:'Earned the Certified Cybersecurity Educator Professional certificate on January 7, 2026, and completed two AI for Impact courses on content and education.',url:'#learning',major:true},
     ],
     projects: [
+      {category:'done',date:'2026',title:'Kanban Zen Studio',description:'A project management workspace with Kanban, Timeline, Calendar, Gantt and notes, designed to help individuals and teams move work forward step by step.',art:'kanban-studio',artText:'Kanban Zen Studio',url:'/Portfolio/projects/kanban-studio-project/'},
       {category:'growing',date:'2026',title:'Zen Studio CMS',description:'A content workspace by Hương Thiền Nature, designed around practical publishing needs: posts, images and a simpler editorial workflow.',art:'zen-studio',artText:'Zen Studio',url:'https://studio.huongthiennature.com/'},
       {category:'done',date:'2021–2022',title:'Gieo mầm Tỉnh Thức',description:'Content creation, meditation practice sharing, a meditation group, and community activities including Zen Coach 101.',art:'meditation',artText:'Awaken',url:'https://www.youtube.com/@minhtrietthiendinh'},
       {category:'done',date:'01/2025',title:'Học Thiền Đà Nẵng',description:'Built a website for a meditation organization in Da Nang, making contemplative content easier to access.',art:'education',artText:'Be here',url:'https://www.hocthiendanang.com/'},
@@ -119,9 +121,9 @@ function renderTimeline(){
   query('timelineList').innerHTML=selected.map(item=>`<article class="timeline-item"><div class="timeline-year">${textEscape(item.year)}</div><div class="timeline-track"><span class="timeline-dot"></span></div><div class="timeline-copy"><small>${textEscape(item.label)}</small><h3>${textEscape(item.title)}</h3><p>${textEscape(item.desc)}</p>${item.url?`<a href="${safeUrl(item.url)}" ${item.url.startsWith('https')?'target="_blank" rel="noopener noreferrer"':''}>${textEscape(t.openProof)}</a>`:''}</div></article>`).join('');
   const b=query('timelineMore');b.querySelector('span:first-child').textContent=showAllTimeline?t.collapseMilestones:t.seeAllMilestones;b.querySelector('span:last-child').textContent=showAllTimeline?'−':'＋';b.setAttribute('aria-expanded',String(showAllTimeline));
 }
-function detailPath(p){return p.art==='zen-studio'?'projects/zen-studio-cms/':p.art==='fpt'?'projects/video-fpt/':p.art==='education'?'projects/hoc-thien-da-nang/':p.title.includes('An Tâm')?'projects/so-no-an-tam/':''}
+function detailPath(p){return p.art==='kanban-studio'?'projects/kanban-studio-project/':p.art==='zen-studio'?'projects/zen-studio-cms/':p.art==='fpt'?'projects/video-fpt/':p.art==='education'?'projects/hoc-thien-da-nang/':p.title.includes('An Tâm')?'projects/so-no-an-tam/':''}
 function renderFeatured(){
-  const t=translations[language],order=['Zen Studio CMS','Sổ nợ An Tâm','Học Thiền Đà Nẵng','Gieo mầm Tỉnh Thức','Hương Thiền Nature'];
+  const t=translations[language],order=['Kanban Zen Studio','Zen Studio CMS','Sổ nợ An Tâm','Học Thiền Đà Nẵng','Gieo mầm Tỉnh Thức','Hương Thiền Nature'];
   const statusLabel={done:t.filterDone,growing:t.filterGrowing,proposal:t.filterProposal};
   const items=order.map(title=>t.projects.find(p=>p.title===title)).filter(Boolean);
   query('featuredGrid').innerHTML=items.map(p=>{
