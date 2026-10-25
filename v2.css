@@ -572,3 +572,4 @@ body.case-page{font-family:var(--sans)}
 .v2-art.zen-studio:before,.project-art.zen-studio:before{border-color:#dbeec788!important}
 .v2-art.zen-studio span,.project-art.zen-studio>span:first-child{font-family:var(--serif,Georgia,serif);text-shadow:0 2px 13px #183b3280}
 @media(min-width:1101px){.v2-featured .v2-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.project-art.kanban-studio,.v2-art.kanban-studio{background:linear-gradient(135deg,#443365,#7950a0 55%,#bb728b);color:#fff}.project-art.kanban-studio span,.v2-art.kanban-studio span{color:#fff;text-shadow:0 2px 8px #352a4440}.project-art.kanban-studio:before,.v2-art.kanban-studio:before{border-color:#ffffff55}.project-art.kanban-studio .art-corner{color:#fff}
